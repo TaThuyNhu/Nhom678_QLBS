@@ -360,3 +360,7 @@ C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net
 C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
 C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
 C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
+C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmChucVu.resources
+C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmCuaHang.resources
+C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmGiamGia.resources
+C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmHoaDonCt.resources
