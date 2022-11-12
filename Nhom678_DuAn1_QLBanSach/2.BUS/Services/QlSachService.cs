@@ -14,9 +14,12 @@ namespace _2.BUS.Services
     public class QlSachService : ISachService
     {
         private ISanPhamRepository _iPhamRepository;
+        private ITheLoaiCtRepository _iLoaiCtRepository;
+
         public QlSachService()
         {
             _iPhamRepository = new SanPhamRepository();
+            _iLoaiCtRepository = new TheLoaiCtRepository();
         }
 
         public string Add(SachView sachView)
@@ -68,10 +71,11 @@ namespace _2.BUS.Services
         {
             List<SachView> list = new List<SachView>();
             list = (from n in _iPhamRepository.GetAllSach()
+                    join a in _iLoaiCtRepository.GetAllTheLoaiCt() on n.MaTheLoaiChiTiet equals a.MaTheLoaiChiTiet
                     select new SachView
                     {
                         MaSach = n.MaSach,
-                        MaTheLoaiChiTiet = n.MaTheLoaiChiTiet,
+                        MaTheLoaiChiTiet = a.MaTheLoaiChiTiet,
                         NgayXuatBan = n.NgayXuatBan,
                         SoTrang = n.SoTrang,
                         SoLuong = n.SoLuong,

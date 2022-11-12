@@ -11,10 +11,12 @@ namespace _2.BUS.Services
     public class QlTheLoaiCtService : ITheLoaiCtService
     {
         private ITheLoaiCtRepository _iTheLoaiCtRepository;
+        private ITheLoaiRepository _iTheLoaiRepository;
 
         public QlTheLoaiCtService()
         {
             _iTheLoaiCtRepository = new TheLoaiCtRepository();
+            _iTheLoaiRepository = new TheLoaiRepository();
         }
 
         public string Add(TheLoaiCtView theLoaiCtView)
@@ -47,10 +49,13 @@ namespace _2.BUS.Services
         {
             List<TheLoaiCtView> list = new List<TheLoaiCtView>();
             list = (from a in _iTheLoaiCtRepository.GetAllTheLoaiCt()
+                    join b in _iTheLoaiRepository.GetAllTheLoai() on a.MaTheLoai equals b.MaTheLoai
                     select new TheLoaiCtView
                     {
                         MaTheLoaiChiTiet = a.MaTheLoaiChiTiet,
+                        MaTheLoai = b.MaTheLoai,
                         TenTheLoai = a.TenTheLoai,
+                        TrangThai = a.TrangThai,
                     }).ToList();
             return list;
         }

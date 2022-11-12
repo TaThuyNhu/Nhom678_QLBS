@@ -75,13 +75,13 @@ namespace _2.BUS.Services
         {
             List<NhanVienView> nvView = new List<NhanVienView>();
             nvView = (from a in _iNvRepository.GetAllNhanVien()
-                          //join b in _cuaHangRepository.GetAllCuaHang() on a.IdCh equals b.Id
-                          //join c in _chucVuRepository.GetAllChucVu() on a.IdCv equals c.Id
+                      join b in _cuaHangRepository.GetAllCuaHang() on a.MaCh equals b.MaCh
+                      join c in _chucVuRepository.GetAllChucVu() on a.MaChucVu equals c.MaCv
                       select new NhanVienView
                       {
                           MaNhanVien = a.MaNhanVien,
-                          MaChucVu = a.MaChucVu,
-                          MaCh = a.MaCh,
+                          MaChucVu = c.MaCv,
+                          MaCh = b.MaCh,
                           HoTen = a.HoTen,
                           Tuoi = a.Tuoi,
                           QueQuan = a.QueQuan,
