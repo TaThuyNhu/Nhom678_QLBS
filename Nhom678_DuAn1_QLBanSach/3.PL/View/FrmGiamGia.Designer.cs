@@ -31,6 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtp_ThoiHan = new System.Windows.Forms.DateTimePicker();
+            this.tbt_PhanTram = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.btn_TimKiemGg = new System.Windows.Forms.Button();
             this.btn_XoaGg = new System.Windows.Forms.Button();
             this.btn_SuaGg = new System.Windows.Forms.Button();
@@ -45,9 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbt_MaGiamGia = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbt_PhanTram = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dtp_ThoiHan = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ShowData_GiamGia)).BeginInit();
@@ -60,7 +60,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1152, 98);
+            this.panel1.Size = new System.Drawing.Size(1198, 98);
             this.panel1.TabIndex = 19;
             // 
             // label5
@@ -98,8 +98,31 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 98);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1152, 583);
+            this.panel2.Size = new System.Drawing.Size(1198, 684);
             this.panel2.TabIndex = 18;
+            // 
+            // dtp_ThoiHan
+            // 
+            this.dtp_ThoiHan.Location = new System.Drawing.Point(184, 134);
+            this.dtp_ThoiHan.Name = "dtp_ThoiHan";
+            this.dtp_ThoiHan.Size = new System.Drawing.Size(250, 27);
+            this.dtp_ThoiHan.TabIndex = 36;
+            // 
+            // tbt_PhanTram
+            // 
+            this.tbt_PhanTram.Location = new System.Drawing.Point(184, 198);
+            this.tbt_PhanTram.Name = "tbt_PhanTram";
+            this.tbt_PhanTram.Size = new System.Drawing.Size(575, 27);
+            this.tbt_PhanTram.TabIndex = 33;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(31, 205);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 20);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "Phần trăm";
             // 
             // btn_TimKiemGg
             // 
@@ -242,34 +265,11 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Mã giảm giá";
             // 
-            // tbt_PhanTram
-            // 
-            this.tbt_PhanTram.Location = new System.Drawing.Point(184, 198);
-            this.tbt_PhanTram.Name = "tbt_PhanTram";
-            this.tbt_PhanTram.Size = new System.Drawing.Size(575, 27);
-            this.tbt_PhanTram.TabIndex = 33;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 205);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 20);
-            this.label7.TabIndex = 32;
-            this.label7.Text = "Phần trăm";
-            // 
-            // dtp_ThoiHan
-            // 
-            this.dtp_ThoiHan.Location = new System.Drawing.Point(184, 134);
-            this.dtp_ThoiHan.Name = "dtp_ThoiHan";
-            this.dtp_ThoiHan.Size = new System.Drawing.Size(250, 27);
-            this.dtp_ThoiHan.TabIndex = 36;
-            // 
             // FrmGiamGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 681);
+            this.ClientSize = new System.Drawing.Size(1198, 782);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmGiamGia";

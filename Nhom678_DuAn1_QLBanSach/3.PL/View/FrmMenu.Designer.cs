@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -52,7 +53,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(210, 450);
+            this.panel1.Size = new System.Drawing.Size(210, 782);
             this.panel1.TabIndex = 0;
             // 
             // button5
@@ -61,8 +62,9 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 380);
+            this.button5.Location = new System.Drawing.Point(0, 500);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(210, 60);
             this.button5.TabIndex = 5;
@@ -76,8 +78,9 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Image = global::_3.PL.Properties.Resources.icons8_chart_40;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 320);
+            this.button4.Location = new System.Drawing.Point(0, 440);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(210, 60);
             this.button4.TabIndex = 4;
@@ -91,12 +94,13 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 260);
+            this.button3.Location = new System.Drawing.Point(0, 380);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(210, 60);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Kho";
+            this.button3.Text = "Quản lý";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -108,7 +112,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Image = global::_3.PL.Properties.Resources.icons8_user_48;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 200);
+            this.button2.Location = new System.Drawing.Point(0, 320);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(210, 60);
             this.button2.TabIndex = 2;
@@ -124,7 +128,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = global::_3.PL.Properties.Resources.icons8_paid_bill_48;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 140);
+            this.button1.Location = new System.Drawing.Point(0, 260);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(210, 60);
             this.button1.TabIndex = 1;
@@ -140,11 +144,11 @@
             this.btn_MuaHang.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_MuaHang.Image = global::_3.PL.Properties.Resources.icons8_supermarket_48__2_;
             this.btn_MuaHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_MuaHang.Location = new System.Drawing.Point(0, 80);
+            this.btn_MuaHang.Location = new System.Drawing.Point(0, 200);
             this.btn_MuaHang.Name = "btn_MuaHang";
             this.btn_MuaHang.Size = new System.Drawing.Size(210, 60);
             this.btn_MuaHang.TabIndex = 0;
-            this.btn_MuaHang.Text = "Mua sach";
+            this.btn_MuaHang.Text = "Bán Hàng";
             this.btn_MuaHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_MuaHang.UseVisualStyleBackColor = true;
             // 
@@ -154,14 +158,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(210, 80);
+            this.panel2.Size = new System.Drawing.Size(210, 200);
             this.panel2.TabIndex = 0;
             // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1198, 782);
             this.Controls.Add(this.panel1);
             this.Name = "FrmMenu";
             this.Text = "FrmMenu";

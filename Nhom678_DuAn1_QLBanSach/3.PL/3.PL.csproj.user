@@ -10,10 +10,28 @@
     <Compile Update="View\FrmGiamGia.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\FrmHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\FrmHoaDonCt.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\FrmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\FrmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\FrmNhaXuatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\FrmQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\FrmSach.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -154,7 +154,7 @@
             this.btn_ThemCh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(206)))), ((int)(((byte)(248)))));
             this.btn_ThemCh.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_ThemCh.Location = new System.Drawing.Point(923, 120);
-            this.btn_ThemCh.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.btn_ThemCh.Margin = new System.Windows.Forms.Padding(0);
             this.btn_ThemCh.Name = "btn_ThemCh";
             this.btn_ThemCh.Size = new System.Drawing.Size(157, 52);
             this.btn_ThemCh.TabIndex = 13;
@@ -166,7 +166,7 @@
             this.btn_SuaCh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(206)))), ((int)(((byte)(248)))));
             this.btn_SuaCh.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_SuaCh.Location = new System.Drawing.Point(923, 210);
-            this.btn_SuaCh.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.btn_SuaCh.Margin = new System.Windows.Forms.Padding(0);
             this.btn_SuaCh.Name = "btn_SuaCh";
             this.btn_SuaCh.Size = new System.Drawing.Size(157, 52);
             this.btn_SuaCh.TabIndex = 14;
@@ -178,7 +178,7 @@
             this.btn_XoaCh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(206)))), ((int)(((byte)(248)))));
             this.btn_XoaCh.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_XoaCh.Location = new System.Drawing.Point(923, 295);
-            this.btn_XoaCh.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.btn_XoaCh.Margin = new System.Windows.Forms.Padding(0);
             this.btn_XoaCh.Name = "btn_XoaCh";
             this.btn_XoaCh.Size = new System.Drawing.Size(157, 52);
             this.btn_XoaCh.TabIndex = 15;
@@ -190,7 +190,7 @@
             this.btn_TimKiemCh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(206)))), ((int)(((byte)(248)))));
             this.btn_TimKiemCh.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_TimKiemCh.Location = new System.Drawing.Point(923, 384);
-            this.btn_TimKiemCh.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.btn_TimKiemCh.Margin = new System.Windows.Forms.Padding(0);
             this.btn_TimKiemCh.Name = "btn_TimKiemCh";
             this.btn_TimKiemCh.Size = new System.Drawing.Size(157, 52);
             this.btn_TimKiemCh.TabIndex = 16;
@@ -203,7 +203,7 @@
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(462, 30);
-            this.label5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(273, 68);
             this.label5.TabIndex = 17;
@@ -216,7 +216,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1176, 98);
+            this.panel1.Size = new System.Drawing.Size(1198, 98);
             this.panel1.TabIndex = 18;
             // 
             // FrmCuaHang
@@ -224,7 +224,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(252)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(1176, 693);
+            this.ClientSize = new System.Drawing.Size(1198, 782);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_TimKiemCh);
             this.Controls.Add(this.btn_XoaCh);
