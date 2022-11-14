@@ -30,15 +30,11 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbx_Ho = new System.Windows.Forms.TextBox();
+            this.tbx_HoVaTen = new System.Windows.Forms.TextBox();
             this.Ho = new System.Windows.Forms.Label();
             this.Btn_ThemKh = new System.Windows.Forms.Button();
             this.Dgrid_KhachHang = new System.Windows.Forms.DataGridView();
             this.Dttime_NgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.tbx_TenDem = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbx_Ten = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tbx_Sdt = new System.Windows.Forms.TextBox();
@@ -80,27 +76,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(462, 30);
+            this.label1.Location = new System.Drawing.Point(407, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(303, 34);
             this.label1.TabIndex = 17;
             this.label1.Text = "Quản Lý Khách Hàng";
             // 
-            // tbx_Ho
+            // tbx_HoVaTen
             // 
-            this.tbx_Ho.Location = new System.Drawing.Point(155, 212);
-            this.tbx_Ho.Name = "tbx_Ho";
-            this.tbx_Ho.Size = new System.Drawing.Size(308, 27);
-            this.tbx_Ho.TabIndex = 1;
+            this.tbx_HoVaTen.Location = new System.Drawing.Point(155, 212);
+            this.tbx_HoVaTen.Name = "tbx_HoVaTen";
+            this.tbx_HoVaTen.Size = new System.Drawing.Size(308, 27);
+            this.tbx_HoVaTen.TabIndex = 1;
             // 
             // Ho
             // 
             this.Ho.AutoSize = true;
             this.Ho.Location = new System.Drawing.Point(11, 219);
             this.Ho.Name = "Ho";
-            this.Ho.Size = new System.Drawing.Size(29, 20);
+            this.Ho.Size = new System.Drawing.Size(75, 20);
             this.Ho.TabIndex = 2;
-            this.Ho.Text = "Họ";
+            this.Ho.Text = "Họ và Tên";
             // 
             // Btn_ThemKh
             // 
@@ -133,42 +129,10 @@
             this.Dttime_NgaySinh.Size = new System.Drawing.Size(282, 27);
             this.Dttime_NgaySinh.TabIndex = 6;
             // 
-            // tbx_TenDem
-            // 
-            this.tbx_TenDem.Location = new System.Drawing.Point(155, 276);
-            this.tbx_TenDem.Name = "tbx_TenDem";
-            this.tbx_TenDem.Size = new System.Drawing.Size(308, 27);
-            this.tbx_TenDem.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 283);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tên Đệm";
-            // 
-            // tbx_Ten
-            // 
-            this.tbx_Ten.Location = new System.Drawing.Point(155, 337);
-            this.tbx_Ten.Name = "tbx_Ten";
-            this.tbx_Ten.Size = new System.Drawing.Size(308, 27);
-            this.tbx_Ten.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 344);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Tên";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 407);
+            this.label5.Location = new System.Drawing.Point(11, 276);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 20);
             this.label5.TabIndex = 2;
@@ -217,7 +181,7 @@
             // 
             // tbx_Email
             // 
-            this.tbx_Email.Location = new System.Drawing.Point(668, 328);
+            this.tbx_Email.Location = new System.Drawing.Point(181, 326);
             this.tbx_Email.Name = "tbx_Email";
             this.tbx_Email.Size = new System.Drawing.Size(282, 27);
             this.tbx_Email.TabIndex = 1;
@@ -225,7 +189,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(524, 335);
+            this.label9.Location = new System.Drawing.Point(11, 333);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(46, 20);
             this.label9.TabIndex = 2;
@@ -234,7 +198,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(524, 396);
+            this.label10.Location = new System.Drawing.Point(524, 333);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(75, 20);
             this.label10.TabIndex = 2;
@@ -266,7 +230,7 @@
             // 
             this.groupBox1.Controls.Add(this.rdbtn_co);
             this.groupBox1.Controls.Add(this.rdbtn_Khong);
-            this.groupBox1.Location = new System.Drawing.Point(668, 385);
+            this.groupBox1.Location = new System.Drawing.Point(668, 322);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(282, 31);
             this.groupBox1.TabIndex = 7;
@@ -277,7 +241,7 @@
             // 
             this.groupBox2.Controls.Add(this.rdbtn_Nam);
             this.groupBox2.Controls.Add(this.rdbtn_Nu);
-            this.groupBox2.Location = new System.Drawing.Point(155, 394);
+            this.groupBox2.Location = new System.Drawing.Point(155, 263);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(308, 33);
             this.groupBox2.TabIndex = 8;
@@ -358,7 +322,7 @@
             // tbt_TimKiem
             // 
             this.tbt_TimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.tbt_TimKiem.Location = new System.Drawing.Point(222, 462);
+            this.tbt_TimKiem.Location = new System.Drawing.Point(194, 462);
             this.tbt_TimKiem.Name = "tbt_TimKiem";
             this.tbt_TimKiem.PlaceholderText = "Tìm kiếm theo mã, tên ";
             this.tbt_TimKiem.Size = new System.Drawing.Size(728, 30);
@@ -386,15 +350,11 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.Ho);
             this.Controls.Add(this.tbx_Email);
             this.Controls.Add(this.tbx_DiaChi);
             this.Controls.Add(this.tbx_Sdt);
-            this.Controls.Add(this.tbx_Ten);
-            this.Controls.Add(this.tbx_TenDem);
-            this.Controls.Add(this.tbx_Ho);
+            this.Controls.Add(this.tbx_HoVaTen);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmKhachHang";
@@ -416,15 +376,11 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbx_Ho;
+        private System.Windows.Forms.TextBox tbx_HoVaTen;
         private System.Windows.Forms.Label Ho;
         private System.Windows.Forms.Button Btn_ThemKh;
         private System.Windows.Forms.DataGridView Dgrid_KhachHang;
         private System.Windows.Forms.DateTimePicker Dttime_NgaySinh;
-        private System.Windows.Forms.TextBox tbx_TenDem;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbx_Ten;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbx_Sdt;

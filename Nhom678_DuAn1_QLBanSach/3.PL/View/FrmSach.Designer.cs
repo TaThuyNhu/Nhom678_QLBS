@@ -83,7 +83,7 @@
             // 
             this.Btn_TimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(206)))), ((int)(((byte)(248)))));
             this.Btn_TimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Btn_TimKiem.Location = new System.Drawing.Point(911, 440);
+            this.Btn_TimKiem.Location = new System.Drawing.Point(911, 445);
             this.Btn_TimKiem.Name = "Btn_TimKiem";
             this.Btn_TimKiem.Size = new System.Drawing.Size(157, 52);
             this.Btn_TimKiem.TabIndex = 32;
@@ -216,7 +216,7 @@
             this.dttime_NgayXuatBan.Size = new System.Drawing.Size(250, 27);
             this.dttime_NgayXuatBan.TabIndex = 42;
             // 
-            // Sach
+            // FrmSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -239,7 +239,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Name = "Sach";
+            this.Name = "FrmSach";
             this.Text = "Sach";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
