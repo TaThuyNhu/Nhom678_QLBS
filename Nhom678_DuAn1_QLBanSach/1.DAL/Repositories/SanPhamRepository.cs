@@ -36,7 +36,7 @@ namespace _1.DAL.Repositories
             _dbContext.SaveChanges();
             return true;
         }
-        
+
         public List<Sach> GetAllSach()
         {
             _lstSach = _dbContext.Saches.ToList();
@@ -53,16 +53,16 @@ namespace _1.DAL.Repositories
             if (sach == null) return false;
             //obj.Id = Guid.NewGuid();// tu dong zen khoa chinh
             var tempobj = _dbContext.Saches.FirstOrDefault(c => c.MaSach == sach.MaSach);
-            tempobj.MaTheLoaiChiTiet = sach.MaTheLoaiChiTiet;
+            //tempobj.MaTheLoaiChiTiet = sach.MaTheLoaiChiTiet;
             tempobj.NgayXuatBan = sach.NgayXuatBan;
             tempobj.SoTrang = sach.SoTrang;
-            tempobj.SoLuong = sach.SoLuong;
+            //tempobj.SoLuong = sach.SoLuong;
             tempobj.MoTa = sach.MoTa;
-            tempobj.TacGia = sach.TacGia;
-            tempobj.NgayNhap = sach.NgayNhap;
-            tempobj.NgayXuat = sach.NgayXuat;
-            tempobj.SoLuongConLai = sach.SoLuongConLai;
-            tempobj.TrangThai = sach.TrangThai;
+            //tempobj.TacGia = sach.TacGia;
+            //tempobj.NgayNhap = sach.NgayNhap;
+            //tempobj.NgayXuat = sach.NgayXuat;
+            //tempobj.SoLuongConLai = sach.SoLuongConLai;
+            //tempobj.TrangThai = sach.TrangThai;
             _dbContext.Saches.Update(tempobj);
             _dbContext.SaveChanges();
             return true;

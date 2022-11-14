@@ -21,7 +21,7 @@ namespace _1.DAL.DomainClass
         public string MaHoaDon { get; set; }
         [Required]
         [StringLength(50)]
-        public string MaKhachHang { get; set; }
+        public string MaLoaiGiaoDich { get; set; }
         [Required]
         [StringLength(50)]
         public string MaNhanVien { get; set; }
@@ -31,11 +31,12 @@ namespace _1.DAL.DomainClass
         public DateTime NgayShip { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime NgayNhan { get; set; }
-        public int TrangThai { get; set; }
+        [StringLength(50)]
+        public string TrangThai { get; set; }
 
-        [ForeignKey(nameof(MaKhachHang))]
-        [InverseProperty(nameof(KhachHang.HoaDons))]
-        public virtual KhachHang MaKhachHangNavigation { get; set; }
+        [ForeignKey(nameof(MaLoaiGiaoDich))]
+        [InverseProperty(nameof(LoaiHinhGiaoDich.HoaDons))]
+        public virtual LoaiHinhGiaoDich MaLoaiGiaoDichNavigation { get; set; }
         [ForeignKey(nameof(MaNhanVien))]
         [InverseProperty(nameof(NhanVien.HoaDons))]
         public virtual NhanVien MaNhanVienNavigation { get; set; }

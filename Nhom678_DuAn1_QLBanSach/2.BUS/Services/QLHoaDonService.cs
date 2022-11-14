@@ -32,12 +32,12 @@ namespace _2.BUS.Services
             var temp = new HoaDon()
             {
                 MaHoaDon = hoaDonView.MaHoaDon,
-                MaKhachHang = hoaDonView.MaKhachHang,
+                //MaKhachHang = hoaDonView.MaKhachHang,
                 MaNhanVien = hoaDonView.MaNhanVien,
                 NgayTaoDon = hoaDonView.NgayTaoDon,
                 NgayNhan = hoaDonView.NgayNhan,
                 NgayShip = hoaDonView.NgayShip,
-                TrangThai = hoaDonView.TrangThai,
+                //TrangThai = hoaDonView.TrangThai,
             };
             if (HoaDonRepository.AddHoaDon(temp))
                 return "Them thanh cong";
@@ -52,12 +52,12 @@ namespace _2.BUS.Services
             var temp = new HoaDon()
             {
                 MaHoaDon = hoaDonView.MaHoaDon,
-                MaKhachHang = hoaDonView.MaKhachHang,
+                //MaKhachHang = hoaDonView.MaKhachHang,
                 MaNhanVien = hoaDonView.MaNhanVien,
                 NgayTaoDon = hoaDonView.NgayTaoDon,
                 NgayNhan = hoaDonView.NgayNhan,
                 NgayShip = hoaDonView.NgayShip,
-                TrangThai = hoaDonView.TrangThai,
+                //TrangThai = hoaDonView.TrangThai,
             };
             if (HoaDonRepository.AddHoaDon(temp))
                 return "Xoa thanh cong";
@@ -68,17 +68,17 @@ namespace _2.BUS.Services
         {
             List<HoaDonView> list = new List<HoaDonView>();
             list = (from n in HoaDonRepository.GetAllHoaDon()
-                    join b in khachHangRepository.GetAllKhachHang() on n.MaKhachHang equals b.MaKhachHang
+                    //join b in khachHangRepository.GetAllKhachHang() on n.MaKhachHang equals b.MaKhachHang
                     join c in nhanVienRepository.GetAllNhanVien() on n.MaNhanVien equals c.MaNhanVien
                     select new HoaDonView
                     {
                         MaHoaDon = n.MaHoaDon,
-                        MaKhachHang = b.MaKhachHang,
+                        //MaKhachHang = b.MaKhachHang,
                         MaNhanVien = c.MaNhanVien,
                         NgayTaoDon = n.NgayTaoDon,
                         NgayNhan = n.NgayNhan,
                         NgayShip = n.NgayShip,
-                        TrangThai = n.TrangThai,
+                        //TrangThai = n.TrangThai,
                     }).ToList();
             return list;
         }
@@ -92,18 +92,18 @@ namespace _2.BUS.Services
             var temp = new HoaDon()
             {
                 MaHoaDon = hoaDonView.MaHoaDon,
-                MaKhachHang = hoaDonView.MaKhachHang,
+                //MaKhachHang = hoaDonView.MaKhachHang,
                 MaNhanVien = hoaDonView.MaNhanVien,
                 NgayTaoDon = hoaDonView.NgayTaoDon,
                 NgayNhan = hoaDonView.NgayNhan,
                 NgayShip = hoaDonView.NgayShip,
-                TrangThai = hoaDonView.TrangThai,
+                //TrangThai = hoaDonView.TrangThai,
             };
             if (HoaDonRepository.AddHoaDon(temp))
                 return "Sua thanh cong";
             return "Sua khong thanh cong";
         }
 
-       
+
     }
 }

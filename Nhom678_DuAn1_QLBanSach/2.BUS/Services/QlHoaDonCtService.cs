@@ -34,11 +34,11 @@ namespace _2.BUS.Services
             {
                 MaHoaDonChiTiet = hoaDonCtView.MaHoaDonChiTiet,
                 MaHoaDon = hoaDonCtView.MaHoaDon,
-                MaSach = hoaDonCtView.MaSach,
+                //MaSach = hoaDonCtView.MaSach,
                 MaGiamGia = hoaDonCtView.MaGiamGia,
                 GiaGoc = hoaDonCtView.GiaGoc,
-                GiaBan = hoaDonCtView.GiaBan,
-                SoLuong = hoaDonCtView.SoLuong,
+                //GiaBan = hoaDonCtView.GiaBan,
+                //SoLuong = hoaDonCtView.SoLuong,
                 TrangThai = hoaDonCtView.TrangThai,
             };
             if (_hoaDonCtRepository.AddHoaDonCt(temp))
@@ -56,11 +56,11 @@ namespace _2.BUS.Services
             {
                 MaHoaDonChiTiet = hoaDonCtView.MaHoaDonChiTiet,
                 MaHoaDon = hoaDonCtView.MaHoaDon,
-                MaSach = hoaDonCtView.MaSach,
+                //MaSach = hoaDonCtView.MaSach,
                 MaGiamGia = hoaDonCtView.MaGiamGia,
                 GiaGoc = hoaDonCtView.GiaGoc,
-                GiaBan = hoaDonCtView.GiaBan,
-                SoLuong = hoaDonCtView.SoLuong,
+                //GiaBan = hoaDonCtView.GiaBan,
+                //SoLuong = hoaDonCtView.SoLuong,
                 TrangThai = hoaDonCtView.TrangThai,
             };
             if (_hoaDonCtRepository.DeleteHoaDonCt(temp))
@@ -72,20 +72,20 @@ namespace _2.BUS.Services
         {
             List<HoaDonCtView> temp = new List<HoaDonCtView>();
             temp = (from a in _hoaDonCtRepository.GetAllHoaDonCt()
-                      join b in _hoaDonRepository.GetAllHoaDon() on a.MaHoaDon equals b.MaHoaDon
-                      join c in _sanPhamRepository.GetAllSach() on a.MaSach equals c.MaSach
-                      join d in _igiamGiaRepository.GetAllGiamGia() on a.MaGiamGia equals d.MaGg
-                      select new HoaDonCtView
-                      {
-                          MaHoaDonChiTiet = a.MaHoaDonChiTiet,
-                          MaHoaDon = b.MaHoaDon,
-                          MaSach = c.MaSach,
-                          MaGiamGia=d.MaGg,
-                          GiaGoc = a.GiaGoc,
-                          GiaBan = a.GiaBan,
-                          SoLuong = a.SoLuong,
-                          TrangThai = a.TrangThai,
-                      }).ToList();
+                    join b in _hoaDonRepository.GetAllHoaDon() on a.MaHoaDon equals b.MaHoaDon
+                    //join c in _sanPhamRepository.GetAllSach() on a.MaSach equals c.MaSach
+                    join d in _igiamGiaRepository.GetAllGiamGia() on a.MaGiamGia equals d.MaGg
+                    select new HoaDonCtView
+                    {
+                        MaHoaDonChiTiet = a.MaHoaDonChiTiet,
+                        MaHoaDon = b.MaHoaDon,
+                        //MaSach = c.MaSach,
+                        MaGiamGia = d.MaGg,
+                        GiaGoc = a.GiaGoc,
+                        //GiaBan = a.GiaBan,
+                        //SoLuong = a.SoLuong,
+                        TrangThai = a.TrangThai,
+                    }).ToList();
             return temp;
         }
 
@@ -99,11 +99,11 @@ namespace _2.BUS.Services
             {
                 MaHoaDonChiTiet = hoaDonCtView.MaHoaDonChiTiet,
                 MaHoaDon = hoaDonCtView.MaHoaDon,
-                MaSach = hoaDonCtView.MaSach,
+                //MaSach = hoaDonCtView.MaSach,
                 MaGiamGia = hoaDonCtView.MaGiamGia,
                 GiaGoc = hoaDonCtView.GiaGoc,
-                GiaBan = hoaDonCtView.GiaBan,
-                SoLuong = hoaDonCtView.SoLuong,
+                //GiaBan = hoaDonCtView.GiaBan,
+                //SoLuong = hoaDonCtView.SoLuong,
                 TrangThai = hoaDonCtView.TrangThai,
             };
             if (_hoaDonCtRepository.UpdateHoaDonCt(temp))

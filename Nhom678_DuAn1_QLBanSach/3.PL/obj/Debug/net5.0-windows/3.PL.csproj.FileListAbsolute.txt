@@ -364,3 +364,9 @@ C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net
 C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmCuaHang.resources
 C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmGiamGia.resources
 C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmHoaDonCt.resources
+C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmHoaDon.resources
+C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmKhachHang.resources
+C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmNhanVien.resources
+C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmNhaXuatBan.resources
+C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmQuanLy.resources
+C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmSach.resources

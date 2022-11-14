@@ -13,7 +13,7 @@ namespace _1.DAL.DomainClass
     {
         public TheLoaiChiTiet()
         {
-            Saches = new HashSet<Sach>();
+            ChiTietSaches = new HashSet<ChiTietSach>();
         }
 
         [Key]
@@ -30,7 +30,7 @@ namespace _1.DAL.DomainClass
         [ForeignKey(nameof(MaTheLoai))]
         [InverseProperty(nameof(TheLoai.TheLoaiChiTiets))]
         public virtual TheLoai MaTheLoaiNavigation { get; set; }
-        [InverseProperty(nameof(Sach.MaTheLoaiChiTietNavigation))]
-        public virtual ICollection<Sach> Saches { get; set; }
+        [InverseProperty(nameof(ChiTietSach.MaTheLoaiChiTietNavigation))]
+        public virtual ICollection<ChiTietSach> ChiTietSaches { get; set; }
     }
 }

@@ -57,7 +57,7 @@ namespace _1.DAL.Repositories
             temp.HoTen = kh.HoTen;
             temp.GioiTinh = kh.GioiTinh;
             temp.Tuoi = kh.Tuoi;
-            temp.SoDienThoai = kh.SoDienThoai;
+            //temp.SoDienThoai = kh.SoDienThoai;
             temp.Email = kh.Email;
             temp.DiaChi = kh.DiaChi;
             temp.TrangThai = kh.TrangThai;

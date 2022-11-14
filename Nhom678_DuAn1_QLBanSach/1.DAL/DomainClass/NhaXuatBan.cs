@@ -8,26 +8,31 @@ using Microsoft.EntityFrameworkCore;
 
 namespace _1.DAL.DomainClass
 {
-    [Table("Sach")]
-    public partial class Sach
+    [Table("NhaXuatBan")]
+    public partial class NhaXuatBan
     {
-        public Sach()
+        public NhaXuatBan()
         {
             ChiTietSaches = new HashSet<ChiTietSach>();
         }
 
         [Key]
+        [Column("MaNXB")]
         [StringLength(50)]
-        public string MaSach { get; set; }
-        [Column(TypeName = "datetime")]
-        public DateTime NgayXuatBan { get; set; }
-        public int? SoTrang { get; set; }
-        public int AnBan { get; set; }
+        public string MaNxb { get; set; }
+        [Required]
+        [Column("TenNXB")]
+        [StringLength(50)]
+        public string TenNxb { get; set; }
         [Required]
         [StringLength(50)]
-        public string MoTa { get; set; }
+        public string DiaChi { get; set; }
+        [Required]
+        [Column("URL")]
+        [StringLength(50)]
+        public string Url { get; set; }
 
-        [InverseProperty(nameof(ChiTietSach.MaSachNavigation))]
+        [InverseProperty(nameof(ChiTietSach.MaNxbNavigation))]
         public virtual ICollection<ChiTietSach> ChiTietSaches { get; set; }
     }
 }

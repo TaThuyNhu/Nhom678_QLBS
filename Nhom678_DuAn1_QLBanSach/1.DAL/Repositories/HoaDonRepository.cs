@@ -40,7 +40,7 @@ namespace _1.DAL.Repositories
             _hoaDon = _dBContext.HoaDons.ToList();
             return _hoaDon;
         }
-    
+
 
         public HoaDon GetById(Guid Ma)
         {
@@ -52,7 +52,7 @@ namespace _1.DAL.Repositories
             if (hd == null) return false;
             var temp = _dBContext.HoaDons.FirstOrDefault(c => c.MaHoaDon == hd.MaHoaDon);
             //temp.Ma = obj.Ma;
-            temp.MaKhachHang = hd.MaKhachHang;
+            //temp.MaKhachHang = hd.MaKhachHang;
             temp.MaNhanVien = hd.MaNhanVien;
             temp.NgayShip = hd.NgayShip;
             temp.NgayNhan = hd.NgayNhan;

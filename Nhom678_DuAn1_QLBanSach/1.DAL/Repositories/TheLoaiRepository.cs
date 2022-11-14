@@ -52,7 +52,7 @@ namespace _1.DAL.Repositories
             var temp = _dBContext.TheLoais.FirstOrDefault(c => c.MaTheLoai == tl.MaTheLoai);
             //temp.Ma = obj.Ma;
             temp.MoTa = tl.MoTa;
-            temp.TrangThai = tl.TrangThai;
+            //temp.TrangThai = tl.TrangThai;
             _dBContext.TheLoais.Update(temp);
             _dBContext.SaveChanges();
             return true;

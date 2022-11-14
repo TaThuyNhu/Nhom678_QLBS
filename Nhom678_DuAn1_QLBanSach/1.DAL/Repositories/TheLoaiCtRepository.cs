@@ -45,7 +45,6 @@ namespace _1.DAL.Repositories
         {
             throw new NotImplementedException();
         }
-
         public bool UpdateTheLoaiCt(TheLoaiChiTiet tlct)
         {
             if (tlct == null) return false;

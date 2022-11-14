@@ -28,17 +28,16 @@ namespace _2.BUS.Services
             var obj = new Sach()
             {
                 MaSach = sachView.MaSach,
-                MaTheLoaiChiTiet = sachView.MaTheLoaiChiTiet,
+                //MaTheLoaiChiTiet = sachView.MaTheLoaiChiTiet,
                 NgayXuatBan = sachView.NgayXuatBan,
                 SoTrang = sachView.SoTrang,
-                SoLuong = sachView.SoLuong,
-                TacGia = sachView.TacGia,
+                //SoLuong = sachView.SoLuong,
+                //TacGia = sachView.TacGia,
                 MoTa = sachView.MoTa,
-                NgayNhap = sachView.NgayNhap,
-                NgayXuat = sachView.NgayXuat,
-                SoLuongConLai = sachView.SoLuongConLai,
-                TrangThai = sachView.TrangThai,
-
+                //NgayNhap = sachView.NgayNhap,
+                //NgayXuat = sachView.NgayXuat,
+                //SoLuongConLai = sachView.SoLuongConLai,
+                //TrangThai = sachView.TrangThai,
             };
             if (_iPhamRepository.AddSach(obj))
                 return "Them thanh cong";
@@ -51,18 +50,18 @@ namespace _2.BUS.Services
             var obj = new Sach()
             {
                 MaSach = sachView.MaSach,
-                MaTheLoaiChiTiet = sachView.MaTheLoaiChiTiet,
+                //MaTheLoaiChiTiet = sachView.MaTheLoaiChiTiet,
                 NgayXuatBan = sachView.NgayXuatBan,
                 SoTrang = sachView.SoTrang,
-                SoLuong = sachView.SoLuong,
-                TacGia = sachView.TacGia,
+                //SoLuong = sachView.SoLuong,
+                //TacGia = sachView.TacGia,
                 MoTa = sachView.MoTa,
-                NgayNhap = sachView.NgayNhap,
-                NgayXuat = sachView.NgayXuat,
-                SoLuongConLai = sachView.SoLuongConLai,
-                TrangThai = sachView.TrangThai,
+                //NgayNhap = sachView.NgayNhap,
+                //NgayXuat = sachView.NgayXuat,
+                //SoLuongConLai = sachView.SoLuongConLai,
+                //TrangThai = sachView.TrangThai,
             };
-            if (_iPhamRepository.DeleteSach(obj))
+        if (_iPhamRepository.DeleteSach(obj))
                 return "Xoa thanh cong";
             return "Xoa khong thanh cong";
         }
@@ -71,41 +70,41 @@ namespace _2.BUS.Services
         {
             List<SachView> list = new List<SachView>();
             list = (from n in _iPhamRepository.GetAllSach()
-                    join a in _iLoaiCtRepository.GetAllTheLoaiCt() on n.MaTheLoaiChiTiet equals a.MaTheLoaiChiTiet
+                    //join a in _iLoaiCtRepository.GetAllTheLoaiCt() on n.MaTheLoaiChiTiet equals a.MaTheLoaiChiTiet
                     select new SachView
                     {
                         MaSach = n.MaSach,
-                        MaTheLoaiChiTiet = a.MaTheLoaiChiTiet,
+                        //MaTheLoaiChiTiet = a.MaTheLoaiChiTiet,
                         NgayXuatBan = n.NgayXuatBan,
                         SoTrang = n.SoTrang,
-                        SoLuong = n.SoLuong,
-                        TacGia = n.TacGia,
+                        //SoLuong = n.SoLuong,
+                        //TacGia = n.TacGia,
                         MoTa = n.MoTa,
-                        NgayNhap = n.NgayNhap,
-                        NgayXuat = n.NgayXuat,
-                        SoLuongConLai = n.SoLuongConLai,
-                        TrangThai = n.TrangThai,
+                        //NgayNhap = n.NgayNhap,
+                        //NgayXuat = n.NgayXuat,
+                        //SoLuongConLai = n.SoLuongConLai,
+                        //TrangThai = n.TrangThai,
                     }).ToList();
             return list;
         }
 
-       
+
         public string Update(SachView sachView)
         {
             if (sachView == null) return "Sua khong thanh cong";
             var obj = new Sach()
             {
                 MaSach = sachView.MaSach,
-                MaTheLoaiChiTiet = sachView.MaTheLoaiChiTiet,
+                //MaTheLoaiChiTiet = sachView.MaTheLoaiChiTiet,
                 NgayXuatBan = sachView.NgayXuatBan,
                 SoTrang = sachView.SoTrang,
-                SoLuong = sachView.SoLuong,
-                TacGia = sachView.TacGia,
+                //SoLuong = sachView.SoLuong,
+                //TacGia = sachView.TacGia,
                 MoTa = sachView.MoTa,
-                NgayNhap = sachView.NgayNhap,
-                NgayXuat = sachView.NgayXuat,
-                SoLuongConLai = sachView.SoLuongConLai,
-                TrangThai = sachView.TrangThai,
+                //NgayNhap = sachView.NgayNhap,
+                //NgayXuat = sachView.NgayXuat,
+                //SoLuongConLai = sachView.SoLuongConLai,
+                //TrangThai = sachView.TrangThai,
             };
             if (_iPhamRepository.UpdateSach(obj))
                 return "Sua thanh cong";

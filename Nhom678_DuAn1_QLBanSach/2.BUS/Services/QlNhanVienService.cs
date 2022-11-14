@@ -30,16 +30,16 @@ namespace _2.BUS.Services
             }
             var temp = new NhanVien()
             {
-               MaNhanVien = nvv.MaNhanVien,
-               MaChucVu = nvv.MaChucVu,
-               MaCh = nvv.MaCh,
-               HoTen = nvv.HoTen,
-               Tuoi = nvv.Tuoi,
-               QueQuan = nvv.QueQuan,
-               GioiTinh = nvv.GioiTinh,
-               SoDienThoai = nvv.SoDienThoai,
-               Email = nvv.Email,
-               TrangThai = nvv.TrangThai,
+                MaNhanVien = nvv.MaNhanVien,
+                MaChucVu = nvv.MaChucVu,
+                MaCh = nvv.MaCh,
+                HoTen = nvv.HoTen,
+                Tuoi = nvv.Tuoi,
+                QueQuan = nvv.QueQuan,
+                GioiTinh = nvv.GioiTinh,
+                SoDienThoai = nvv.SoDienThoai,
+                Email = nvv.Email,
+                TrangThai = nvv.TrangThai,
             };
             if (_iNvRepository.AddNhanVien(temp))
                 return "Them thanh cong";

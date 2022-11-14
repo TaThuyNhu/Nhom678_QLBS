@@ -23,10 +23,10 @@ namespace _2.BUS.Services
             if (cuaHangView == null) return "Them khong thanh cong";
             var obj = new CuaHang()
             {
-               MaCh = cuaHangView.Ma,
-               TenCh = cuaHangView.Ten,
-               DiaChi = cuaHangView.DiaChi,
-               TrangThai = cuaHangView.TrangThai,
+                MaCh = cuaHangView.Ma,
+                TenCh = cuaHangView.Ten,
+                DiaChi = cuaHangView.DiaChi,
+                //TrangThai = cuaHangView.TrangThai,
             };
             if (_iCuaHangRepository.AddCuaHang(obj))
                 return "Them thanh cong";
@@ -41,7 +41,7 @@ namespace _2.BUS.Services
                 MaCh = cuaHangView.Ma,
                 TenCh = cuaHangView.Ten,
                 DiaChi = cuaHangView.DiaChi,
-                TrangThai = cuaHangView.TrangThai,
+                //TrangThai = cuaHangView.TrangThai,
             };
             if (_iCuaHangRepository.DeleteCuaHang(obj))
                 return "Xoa thanh cong";
@@ -57,7 +57,7 @@ namespace _2.BUS.Services
                         Ma = n.MaCh,
                         Ten = n.TenCh,
                         DiaChi = n.DiaChi,
-                        TrangThai = n.TrangThai,
+                        //TrangThai = n.TrangThai,
                     }).ToList();
             return list;
         }
@@ -75,7 +75,7 @@ namespace _2.BUS.Services
                 MaCh = cuaHangView.Ma,
                 TenCh = cuaHangView.Ten,
                 DiaChi = cuaHangView.DiaChi,
-                TrangThai = cuaHangView.TrangThai,
+                //TrangThai = cuaHangView.TrangThai,
             };
             if (_iCuaHangRepository.UpdateCuaHang(obj))
                 return "Sua thanh cong";

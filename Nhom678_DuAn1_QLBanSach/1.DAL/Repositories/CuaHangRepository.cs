@@ -59,7 +59,7 @@ namespace _1.DAL.Repositories
             //temp.Ma = obj.Ma;
             temp.TenCh = obj.TenCh;
             temp.DiaChi = obj.DiaChi;
-            temp.TrangThai=obj.TrangThai;
+            //temp.TrangThai = obj.TrangThai;
             _dBContext.CuaHangs.Update(temp);
             _dBContext.SaveChanges();
             return true;

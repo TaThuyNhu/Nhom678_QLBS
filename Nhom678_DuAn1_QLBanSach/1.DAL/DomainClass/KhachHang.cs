@@ -13,7 +13,7 @@ namespace _1.DAL.DomainClass
     {
         public KhachHang()
         {
-            HoaDons = new HashSet<HoaDon>();
+            LoaiHinhGiaoDiches = new HashSet<LoaiHinhGiaoDich>();
         }
 
         [Key]
@@ -24,7 +24,9 @@ namespace _1.DAL.DomainClass
         public string HoTen { get; set; }
         public bool GioiTinh { get; set; }
         public int Tuoi { get; set; }
-        public int SoDienThoai { get; set; }
+        [Required]
+        [StringLength(50)]
+        public string Sdt { get; set; }
         [Required]
         [StringLength(50)]
         public string Email { get; set; }
@@ -32,7 +34,7 @@ namespace _1.DAL.DomainClass
         public string DiaChi { get; set; }
         public int TrangThai { get; set; }
 
-        [InverseProperty(nameof(HoaDon.MaKhachHangNavigation))]
-        public virtual ICollection<HoaDon> HoaDons { get; set; }
+        [InverseProperty(nameof(LoaiHinhGiaoDich.MaKhachHangNavigation))]
+        public virtual ICollection<LoaiHinhGiaoDich> LoaiHinhGiaoDiches { get; set; }
     }
 }

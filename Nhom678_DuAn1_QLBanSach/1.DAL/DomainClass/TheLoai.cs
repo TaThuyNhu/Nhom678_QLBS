@@ -19,9 +19,9 @@ namespace _1.DAL.DomainClass
         [Key]
         [StringLength(50)]
         public string MaTheLoai { get; set; }
+        [Required]
         [StringLength(100)]
         public string MoTa { get; set; }
-        public int? TrangThai { get; set; }
 
         [InverseProperty(nameof(TheLoaiChiTiet.MaTheLoaiNavigation))]
         public virtual ICollection<TheLoaiChiTiet> TheLoaiChiTiets { get; set; }

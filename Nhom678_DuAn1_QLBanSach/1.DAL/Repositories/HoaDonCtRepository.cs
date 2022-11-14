@@ -52,11 +52,11 @@ namespace _1.DAL.Repositories
             var temp = _dBContext.HoaDonChiTiets.FirstOrDefault(c => c.MaHoaDonChiTiet == hdct.MaHoaDonChiTiet);
             //temp.Ma = obj.Ma;
             temp.MaHoaDon = hdct.MaHoaDon;
-            temp.MaSach = hdct.MaSach;
+            //temp.MaSach = hdct.MaSach;
             temp.MaGiamGia = hdct.MaGiamGia;
             temp.GiaGoc = hdct.GiaGoc;
-            temp.GiaBan = hdct.GiaBan;
-            temp.SoLuong = hdct.SoLuong;
+            //temp.GiaBan = hdct.GiaBan;
+            //temp.SoLuong = hdct.SoLuong;
             temp.TrangThai = hdct.TrangThai;
             _dBContext.HoaDonChiTiets.Update(temp);
             _dBContext.SaveChanges();

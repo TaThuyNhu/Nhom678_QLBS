@@ -50,7 +50,7 @@ namespace _2.BUS.Services
             list = (from a in _iChucVuRepository.GetAllChucVu()
                     select new ChucVuView
                     {
-                        
+
                         Ma = a.MaCv,
                         Ten = a.TenCv,
                     }).ToList();
