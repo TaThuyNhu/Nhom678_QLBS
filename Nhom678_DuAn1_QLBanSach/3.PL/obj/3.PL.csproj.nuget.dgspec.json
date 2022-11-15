@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\3.PL\\3.PL.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\3.PL\\3.PL.csproj": {}
   },
   "projects": {
-    "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\1.DAL\\1.DAL.csproj": {
+    "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\1.DAL\\1.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\1.DAL\\1.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\1.DAL\\1.DAL.csproj",
         "projectName": "1.DAL",
-        "projectPath": "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\1.DAL\\1.DAL.csproj",
-        "packagesPath": "C:\\Users\\toanc\\.nuget\\packages\\",
-        "outputPath": "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\1.DAL\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\1.DAL\\1.DAL.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\1.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\toanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -71,8 +71,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -81,24 +80,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\2.BUS\\2.BUS.csproj": {
+    "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\2.BUS\\2.BUS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\2.BUS\\2.BUS.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\2.BUS\\2.BUS.csproj",
         "projectName": "2.BUS",
-        "projectPath": "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\2.BUS\\2.BUS.csproj",
-        "packagesPath": "C:\\Users\\toanc\\.nuget\\packages\\",
-        "outputPath": "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\2.BUS\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\2.BUS\\2.BUS.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\2.BUS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\toanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -113,8 +112,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\1.DAL\\1.DAL.csproj": {
-                "projectPath": "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\1.DAL\\1.DAL.csproj"
+              "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\1.DAL\\1.DAL.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\1.DAL\\1.DAL.csproj"
               }
             }
           }
@@ -134,8 +133,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -144,29 +142,29 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\3.PL\\3.PL.csproj": {
+    "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\3.PL\\3.PL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\3.PL\\3.PL.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\3.PL\\3.PL.csproj",
         "projectName": "3.PL",
-        "projectPath": "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\3.PL\\3.PL.csproj",
-        "packagesPath": "C:\\Users\\toanc\\.nuget\\packages\\",
-        "outputPath": "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\3.PL\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\3.PL\\3.PL.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\3.PL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\toanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0-windows"
+          "net5.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -176,8 +174,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\2.BUS\\2.BUS.csproj": {
-                "projectPath": "E:\\DuAn1_Nhom678_FPLHN\\DuAn!\\Nhom678_DuAn1_QLBanSach\\2.BUS\\2.BUS.csproj"
+              "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\2.BUS\\2.BUS.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\QLBS\\Nhom678_QLBS\\Nhom678_DuAn1_QLBanSach\\2.BUS\\2.BUS.csproj"
               }
             }
           }
@@ -197,11 +195,16 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -210,7 +213,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
