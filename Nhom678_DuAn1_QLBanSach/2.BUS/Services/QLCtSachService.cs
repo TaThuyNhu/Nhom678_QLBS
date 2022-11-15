@@ -11,132 +11,109 @@ using System.Threading.Tasks;
 
 namespace _2.BUS.Services
 {
-    public class QLCtSachService : ISachService
+    public class QLCtSachService : ICtSachService
     {
-        private ISanPhamRepository _ichiTietSachRepository;
-        private IKhoRepository khoRepository ;
-        private ITacGiumRepository _iSanPhamRepository;
-        private IMauSacRepository _iMauSacRepository;
-        private IDspRepository _iDspRepository;
+        private ISanPhamRepository _iSachRepository;
+        private IKhoRepository _iKhoRepository ;
+        private ITacGiaRepository _iTacGiaRepository;
+        private IChiTietSachRepository _iChiTietSachRepository ;
+        private INhaXuatBanRepository _iNhaXuatBanRepository ;
+        private ITheLoaiCtRepository _iTheLoaiCtRepository ;
         public QLCtSachService()
         {
-            _ichiTietSPRepository = new ChiTietSPRepository();
-            _insxRepository = new NsxRepository();
-            _iSanPhamRepository = new SanPhamRepository();
-            _iMauSacRepository = new MauSacRepository();
-            _iDspRepository = new DspRepository();
+            _iSachRepository = new SanPhamRepository();
+            _iKhoRepository = new KhoRepository();
+            _iTacGiaRepository = new TacGiaRepository();
+            _iChiTietSachRepository = new ChiTietSPRepository();
+            _iNhaXuatBanRepository = new NhaXuatBanRepository();
+            _iTheLoaiCtRepository = new TheLoaiCtRepository();
         }
-        public string Add(CtSanPhamView obj)
+     
+        public string Add(CtSachView ctSachV)
         {
-            if (obj == null) return "Them khong thanh cong";
-            var chiTietSanPham = new ChiTietSp()
+            if (ctSachV == null) return "Them khong thanh cong";
+            var chiTietSanPham = new ChiTietSach()
             {
-                Id = obj.Id,
-                IdSp = obj.IdSp,
-                IdNsx = obj.IdNsx,
-                IdMauSac = obj.IdMauSac,
-                IdDongSp = obj.IdDongSp,
-                NamBh = obj.NamBh,
-                MoTa = obj.MoTa,
-                SoLuongTon = obj.SoLuongTon,
-                GiaNhap = obj.GiaNhap,
-                GiaBan = obj.GiaBan,
-
+                MaChiTietSach = ctSachV.MaChiTietSach,
+                MaKho = ctSachV.MaKho,
+                MaTacGia = ctSachV.MaTacGia,
+                MaSach = ctSachV.MaSach,
+                MaTheLoaiChiTiet = ctSachV.MaTheLoaiChiTiet,
+                MaNxb =ctSachV.MaNxb,
+                TrangThai = ctSachV.TrangThai,
             };
-            if (_ichiTietSPRepository.AddChiTietSP(chiTietSanPham))
+            if (_iChiTietSachRepository.AddChiTietSach(chiTietSanPham))
                 return "Them thanh cong";
             return "Them khong thanh cong";
         }
 
-        public string Add(SachView sachView)
+        public string Delete(CtSachView ctSachV)
         {
-            throw new NotImplementedException();
-        }
-
-        public string Delete(CtSanPhamView obj)
-        {
-            if (obj == null) return "Xoa khong thanh cong";
-            var chiTietSanPham = new ChiTietSp()
+            if (ctSachV == null) return "Xoa khong thanh cong";
+            var chiTietSanPham = new ChiTietSach()
             {
-                Id = obj.Id,
-                IdSp = obj.IdSp,
-                IdNsx = obj.IdNsx,
-                IdMauSac = obj.IdMauSac,
-                IdDongSp = obj.IdDongSp,
-                NamBh = obj.NamBh,
-                MoTa = obj.MoTa,
-                SoLuongTon = obj.SoLuongTon,
-                GiaNhap = obj.GiaNhap,
-                GiaBan = obj.GiaBan,
-
+                MaChiTietSach = ctSachV.MaChiTietSach,
+                MaKho = ctSachV.MaKho,
+                MaTacGia = ctSachV.MaTacGia,
+                MaSach = ctSachV.MaSach,
+                MaTheLoaiChiTiet = ctSachV.MaTheLoaiChiTiet,
+                MaNxb = ctSachV.MaNxb,
+                TrangThai = ctSachV.TrangThai,
             };
-            if (_ichiTietSPRepository.DeleteChiTietSP(chiTietSanPham))
+            if (_iChiTietSachRepository.DeleteChiTietSach(chiTietSanPham))
                 return "Xoa thanh cong";
             return "Xoa khong thanh cong";
         }
 
-        public string Delete(SachView sachView)
+        public List<CtSachView> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public List<CtSanPhamView> GetAll()
+        public List<CtSachView> GetAllChiTietSach()
         {
-            List<CtSanPhamView> lstPhamViews = new List<CtSanPhamView>();
-            // viet 1 cau linq de gan gia tri tuong ung prop cua san pham view
+            List<CtSachView> lstPhamViews = new List<CtSachView>();
             lstPhamViews =
-                (from a in _ichiTietSPRepository.GetAllChiTietSP()
-                 join b in _iSanPhamRepository.GetAll() on a.IdSp equals b.Id
-                 join c in _iDspRepository.GetAll() on a.IdDongSp equals c.Id
-                 join d in _iMauSacRepository.GetAll() on a.IdMauSac equals d.Id
-                 join e in _insxRepository.GetAll() on a.IdNsx equals e.Id
-                 select new CtSanPhamView
+                (from a in _iChiTietSachRepository.GetAllChiTietSach()
+                 join b in _iSachRepository.GetAllSach() on a.MaSach equals b.MaSach
+                 join c in _iKhoRepository.GetAllKho() on a.MaKho equals c.MaKho
+                 join d in _iTacGiaRepository.GetAllTacGia() on a.MaTacGia equals d.MaTacGia
+                 join e in _iNhaXuatBanRepository.GetAllNhaXuatBan() on a.MaNxb equals e.MaNxb
+                 join f in _iTheLoaiCtRepository.GetAllTheLoaiCt() on a.MaTheLoaiChiTiet equals f.MaTheLoaiChiTiet
+                 select new CtSachView
                  {
-                     Id = a.Id,
-                     IdSp = b.Id,
-                     IdNsx = e.Id,
-                     IdMauSac = d.Id,
-                     IdDongSp = c.Id,
-                     NamBh = a.NamBh,
-                     MoTa = a.MoTa,
-                     SoLuongTon = a.SoLuongTon,
-                     GiaNhap = a.GiaNhap,
-                     GiaBan = a.GiaBan,
+                     MaChiTietSach = a.MaChiTietSach,
+                     MaSach = b.MaSach,
+                     MaKho = c.MaKho,
+                     MaTacGia = d.MaTacGia,
+                     MaNxb = e.MaNxb,
+                     MaTheLoaiChiTiet = f.MaTheLoaiChiTiet,
+                     TrangThai = a.TrangThai,
                  }
                 ).ToList();
             return lstPhamViews;
         }
 
-        public string Update(CtSanPhamView obj)
+        public ChiTietSach GetById(Guid id)
         {
-            if (obj == null) return "Sua khong thanh cong";
-            var chiTietSanPham = new ChiTietSp()
+            throw new NotImplementedException();
+        }
+        public string Update(CtSachView ctSachV)
+        {
+            if (ctSachV == null) return "sua khong thanh cong";
+            var chiTietSanPham = new ChiTietSach()
             {
-                Id = obj.Id,
-                IdSp = obj.IdSp,
-                IdNsx = obj.IdNsx,
-                IdMauSac = obj.IdMauSac,
-                IdDongSp = obj.IdDongSp,
-                NamBh = obj.NamBh,
-                MoTa = obj.MoTa,
-                SoLuongTon = obj.SoLuongTon,
-                GiaNhap = obj.GiaNhap,
-                GiaBan = obj.GiaBan,
-
+                MaChiTietSach = ctSachV.MaChiTietSach,
+                MaKho = ctSachV.MaKho,
+                MaTacGia = ctSachV.MaTacGia,
+                MaSach = ctSachV.MaSach,
+                MaTheLoaiChiTiet = ctSachV.MaTheLoaiChiTiet,
+                MaNxb = ctSachV.MaNxb,
+                TrangThai = ctSachV.TrangThai,
             };
-            if (_ichiTietSPRepository.UpdateChiTietSP(chiTietSanPham))
-                return "Sua thanh cong";
-            return "Sua khong thanh cong";
-        }
-
-        public string Update(SachView sachView)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<SachView> ISachService.GetAll()
-        {
-            throw new NotImplementedException();
+            if (_iChiTietSachRepository.UpdateChiTietSach(chiTietSanPham))
+                return "sua thanh cong";
+            return "sua khong thanh cong";
         }
     }
 }

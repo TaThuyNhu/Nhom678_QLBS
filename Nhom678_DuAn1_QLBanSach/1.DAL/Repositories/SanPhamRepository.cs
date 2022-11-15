@@ -54,10 +54,10 @@ namespace _1.DAL.Repositories
             //obj.Id = Guid.NewGuid();// tu dong zen khoa chinh
             var tempobj = _dbContext.Saches.FirstOrDefault(c => c.MaSach == sach.MaSach);
             //tempobj.MaTheLoaiChiTiet = sach.MaTheLoaiChiTiet;
-            tempobj.NgayXuatBan = sach.NgayXuatBan;
-            tempobj.SoTrang = sach.SoTrang;
+            //tempobj.NgayXuatBan = sach.NgayXuatBan;
+            //tempobj.SoTrang = sach.SoTrang;
             //tempobj.SoLuong = sach.SoLuong;
-            tempobj.MoTa = sach.MoTa;
+            //tempobj.MoTa = sach.MoTa;
             //tempobj.TacGia = sach.TacGia;
             //tempobj.NgayNhap = sach.NgayNhap;
             //tempobj.NgayXuat = sach.NgayXuat;
