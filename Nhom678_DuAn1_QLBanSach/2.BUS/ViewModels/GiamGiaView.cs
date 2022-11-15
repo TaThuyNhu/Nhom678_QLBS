@@ -15,6 +15,6 @@ namespace _2.BUS.ViewModels
         public string DoiTuongGg { get; set; }
         public DateTime ThoiHan { get; set; }
         public double PhanTram { get; set; }
-        public int TrangThai { get; set; }
+        //public int TrangThai { get; set; }
     }
 }

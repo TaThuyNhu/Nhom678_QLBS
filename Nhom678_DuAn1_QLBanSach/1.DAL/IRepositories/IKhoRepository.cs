@@ -12,7 +12,7 @@ namespace _1.DAL.IRepositories
         bool AddKho(Kho k);
         bool UpdateKho(Kho k);
         bool DeleteKho(Kho k);
-        Kho GetById(Guid id);
+        Kho GetById(Guid Ma);
         List<Kho> GetAllKho();
 
     }

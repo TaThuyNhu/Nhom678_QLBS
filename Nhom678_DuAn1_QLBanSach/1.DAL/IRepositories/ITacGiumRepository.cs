@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _1.DAL.IRepositories
 {
-    internal interface ITacGiumRepository
+    public interface ITacGiumRepository
     {
     }
 }
