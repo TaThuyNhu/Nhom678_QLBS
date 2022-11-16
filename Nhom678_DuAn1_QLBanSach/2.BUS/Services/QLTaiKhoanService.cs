@@ -46,7 +46,15 @@ namespace _2.BUS.Services
 
         public List<TaiKhoanView> GetAll()
         {
-            throw new NotImplementedException();
+            List<TaiKhoanView> list = new List<TaiKhoanView>();
+            list = (from n in TaiKhoanRepository.GetAllTaiKhoan()
+                    select new TaiKhoanView
+                    {
+                        MaNhanVien = n.MaNhanVien,
+                        MaTaiKhoan = n.MaTaiKhoan,
+                        MatKhau = n.MatKhau
+                    }).ToList();
+            return list;
         }
 
         public string Update(TaiKhoanView tkV)
