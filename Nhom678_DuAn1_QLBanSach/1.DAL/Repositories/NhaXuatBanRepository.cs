@@ -42,7 +42,7 @@ namespace _1.DAL.Repositories
             return _NhaXuatBanList;
         }
 
-        public NhaXuatBan GetById(Guid id)
+        public NhaXuatBan GetById(Guid Ma)
         {
             throw new NotImplementedException();
         }

@@ -12,7 +12,7 @@ namespace _1.DAL.IRepositories
         bool AddTaiKhoan(TaiKhoan tk);
         bool UpdateTaiKhoan(TaiKhoan tk);
         bool DeleteTaiKhoan(TaiKhoan tk);
-        TaiKhoan GetById(Guid id);
+        TaiKhoan GetById(Guid Ma);
         List<TaiKhoan> GetAllTaiKhoan();
 
     }

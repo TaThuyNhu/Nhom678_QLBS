@@ -12,7 +12,7 @@ namespace _1.DAL.IRepositories
         bool AddNhaXuatBan(NhaXuatBan nxb);
         bool UpdateNhaXuatBan(NhaXuatBan nxb);
         bool DeleteNhaXuatBan(NhaXuatBan nxb);
-        NhaXuatBan GetById(Guid id);
+        NhaXuatBan GetById(Guid Ma);
         List<NhaXuatBan> GetAllNhaXuatBan();
 
     }

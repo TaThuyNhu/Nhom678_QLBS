@@ -43,7 +43,7 @@ namespace _1.DAL.Repositories
             return _LoaiHinhGiaoDichList;
         }
 
-        public LoaiHinhGiaoDich GetById(Guid id)
+        public LoaiHinhGiaoDich GetById(Guid Ma)
         {
             throw new NotImplementedException();
         }

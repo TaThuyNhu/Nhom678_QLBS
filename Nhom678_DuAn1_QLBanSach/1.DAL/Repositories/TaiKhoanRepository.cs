@@ -41,7 +41,7 @@ namespace _1.DAL.Repositories
             return _TaiKhoanList;
         }
 
-        public TaiKhoan GetById(Guid id)
+        public TaiKhoan GetById(Guid Ma)
         {
             throw new NotImplementedException();
         }

@@ -12,7 +12,7 @@ namespace _1.DAL.IRepositories
         bool AddLoaiHinhGiaoDich(LoaiHinhGiaoDich lh);
         bool UpdateLoaiHinhGiaoDich(LoaiHinhGiaoDich lh);
         bool DeleteLoaiHinhGiaoDich(LoaiHinhGiaoDich lh);
-        LoaiHinhGiaoDich GetById(Guid id);
+        LoaiHinhGiaoDich GetById(Guid Ma);
         List<LoaiHinhGiaoDich> GetAllLoaiHinhGiaoDich();
 
     }

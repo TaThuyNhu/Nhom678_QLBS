@@ -12,7 +12,7 @@ namespace _1.DAL.IRepositories
         bool AddSach(Sach sach);
         bool UpdateSach(Sach sach);
         bool DeleteSach(Sach sach);
-        Sach GetById(Guid id); // phuong thuc tim san pham theo ID
+        Sach GetById(Guid Ma); // phuong thuc tim san pham theo ID
         List<Sach> GetAllSach();
     }
 }
