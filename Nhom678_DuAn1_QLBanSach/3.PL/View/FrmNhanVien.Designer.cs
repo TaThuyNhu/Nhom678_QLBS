@@ -130,7 +130,7 @@
             // 
             this.Btn_TimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(206)))), ((int)(((byte)(248)))));
             this.Btn_TimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Btn_TimKiem.Location = new System.Drawing.Point(1012, 445);
+            this.Btn_TimKiem.Location = new System.Drawing.Point(1012, 423);
             this.Btn_TimKiem.Name = "Btn_TimKiem";
             this.Btn_TimKiem.Size = new System.Drawing.Size(157, 52);
             this.Btn_TimKiem.TabIndex = 4;
@@ -362,10 +362,10 @@
             // tbt_TimKiem
             // 
             this.tbt_TimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.tbt_TimKiem.Location = new System.Drawing.Point(224, 457);
+            this.tbt_TimKiem.Location = new System.Drawing.Point(151, 445);
             this.tbt_TimKiem.Name = "tbt_TimKiem";
             this.tbt_TimKiem.PlaceholderText = "Tìm kiếm theo mã, tên ";
-            this.tbt_TimKiem.Size = new System.Drawing.Size(728, 30);
+            this.tbt_TimKiem.Size = new System.Drawing.Size(719, 30);
             this.tbt_TimKiem.TabIndex = 14;
             // 
             // FrmNhanVien

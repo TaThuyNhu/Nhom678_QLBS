@@ -35,7 +35,7 @@
             this.Btn_Xoa = new System.Windows.Forms.Button();
             this.Btn_Sua = new System.Windows.Forms.Button();
             this.Btn_Them = new System.Windows.Forms.Button();
-            this.tbx_MoTa = new System.Windows.Forms.TextBox();
+            this.tbx_SoLuong = new System.Windows.Forms.TextBox();
             this.tbx_SoTrang = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tbx_AnBan = new System.Windows.Forms.TextBox();
@@ -48,6 +48,8 @@
             this.dttime_NgayXuatBan = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.tbx_TenSach = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_Sach)).BeginInit();
             this.SuspendLayout();
@@ -75,7 +77,7 @@
             // tbt_TimKiem
             // 
             this.tbt_TimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.tbt_TimKiem.Location = new System.Drawing.Point(41, 457);
+            this.tbt_TimKiem.Location = new System.Drawing.Point(41, 495);
             this.tbt_TimKiem.Name = "tbt_TimKiem";
             this.tbt_TimKiem.PlaceholderText = "Tìm kiếm theo mã, tên ";
             this.tbt_TimKiem.Size = new System.Drawing.Size(728, 30);
@@ -85,7 +87,7 @@
             // 
             this.Btn_TimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(206)))), ((int)(((byte)(248)))));
             this.Btn_TimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Btn_TimKiem.Location = new System.Drawing.Point(911, 445);
+            this.Btn_TimKiem.Location = new System.Drawing.Point(911, 483);
             this.Btn_TimKiem.Name = "Btn_TimKiem";
             this.Btn_TimKiem.Size = new System.Drawing.Size(157, 52);
             this.Btn_TimKiem.TabIndex = 32;
@@ -125,12 +127,12 @@
             this.Btn_Them.Text = "Thêm";
             this.Btn_Them.UseVisualStyleBackColor = false;
             // 
-            // tbx_MoTa
+            // tbx_SoLuong
             // 
-            this.tbx_MoTa.Location = new System.Drawing.Point(152, 411);
-            this.tbx_MoTa.Name = "tbx_MoTa";
-            this.tbx_MoTa.Size = new System.Drawing.Size(250, 27);
-            this.tbx_MoTa.TabIndex = 28;
+            this.tbx_SoLuong.Location = new System.Drawing.Point(152, 405);
+            this.tbx_SoLuong.Name = "tbx_SoLuong";
+            this.tbx_SoLuong.Size = new System.Drawing.Size(250, 27);
+            this.tbx_SoLuong.TabIndex = 28;
             // 
             // tbx_SoTrang
             // 
@@ -142,11 +144,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(41, 418);
+            this.label10.Location = new System.Drawing.Point(41, 412);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 20);
+            this.label10.Size = new System.Drawing.Size(69, 20);
             this.label10.TabIndex = 29;
-            this.label10.Text = "Mô tả";
+            this.label10.Text = "Số lượng";
             // 
             // tbx_AnBan
             // 
@@ -234,6 +236,22 @@
             this.tbx_TenSach.Size = new System.Drawing.Size(250, 27);
             this.tbx_TenSach.TabIndex = 20;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(41, 460);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 20);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Mô tả";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(152, 453);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 27);
+            this.textBox1.TabIndex = 28;
+            // 
             // FrmSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -246,7 +264,9 @@
             this.Controls.Add(this.Btn_Xoa);
             this.Controls.Add(this.Btn_Sua);
             this.Controls.Add(this.Btn_Them);
-            this.Controls.Add(this.tbx_MoTa);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbx_SoLuong);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.tbx_SoTrang);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.tbx_AnBan);
@@ -278,7 +298,7 @@
         private System.Windows.Forms.Button Btn_Xoa;
         private System.Windows.Forms.Button Btn_Sua;
         private System.Windows.Forms.Button Btn_Them;
-        private System.Windows.Forms.TextBox tbx_MoTa;
+        private System.Windows.Forms.TextBox tbx_SoLuong;
         private System.Windows.Forms.TextBox tbx_SoTrang;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tbx_AnBan;
@@ -291,5 +311,7 @@
         private System.Windows.Forms.DateTimePicker dttime_NgayXuatBan;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbx_TenSach;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

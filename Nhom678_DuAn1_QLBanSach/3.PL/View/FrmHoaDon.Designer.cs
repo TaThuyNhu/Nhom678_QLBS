@@ -34,9 +34,13 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Btn_TimKiem = new System.Windows.Forms.Button();
             this.tbt_TimKiem = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgrid_HoaDonCT = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDonCT)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,7 +70,7 @@
             this.groupBox1.Controls.Add(this.tbt_TimKiem);
             this.groupBox1.Location = new System.Drawing.Point(0, 131);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1198, 489);
+            this.groupBox1.Size = new System.Drawing.Size(1157, 340);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hóa đơn";
@@ -77,11 +81,11 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 113);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 95);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1132, 345);
+            this.dataGridView1.Size = new System.Drawing.Size(917, 223);
             this.dataGridView1.TabIndex = 17;
             // 
             // Btn_TimKiem
@@ -104,12 +108,36 @@
             this.tbt_TimKiem.Size = new System.Drawing.Size(728, 30);
             this.tbt_TimKiem.TabIndex = 15;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgrid_HoaDonCT);
+            this.groupBox2.Location = new System.Drawing.Point(0, 486);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1157, 369);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Hóa đơn chi tiết";
+            // 
+            // dgrid_HoaDonCT
+            // 
+            this.dgrid_HoaDonCT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgrid_HoaDonCT.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgrid_HoaDonCT.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.dgrid_HoaDonCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrid_HoaDonCT.Location = new System.Drawing.Point(12, 41);
+            this.dgrid_HoaDonCT.Name = "dgrid_HoaDonCT";
+            this.dgrid_HoaDonCT.RowHeadersWidth = 51;
+            this.dgrid_HoaDonCT.RowTemplate.Height = 29;
+            this.dgrid_HoaDonCT.Size = new System.Drawing.Size(917, 223);
+            this.dgrid_HoaDonCT.TabIndex = 17;
+            // 
             // FrmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(252)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1198, 782);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "FrmHoaDon";
@@ -119,6 +147,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_HoaDonCT)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -131,5 +161,7 @@
         private System.Windows.Forms.TextBox tbt_TimKiem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Btn_TimKiem;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dgrid_HoaDonCT;
     }
 }
