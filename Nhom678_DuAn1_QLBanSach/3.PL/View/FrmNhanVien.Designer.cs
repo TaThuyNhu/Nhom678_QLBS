@@ -30,10 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.tbx_MaNv = new System.Windows.Forms.TextBox();
             this.rdbtn_Nam = new System.Windows.Forms.RadioButton();
             this.dgrid_NhanVien = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.Btn_TimKiem = new System.Windows.Forms.Button();
             this.Btn_Xoa = new System.Windows.Forms.Button();
             this.Btn_Sua = new System.Windows.Forms.Button();
@@ -54,8 +54,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.tbx_Email = new System.Windows.Forms.TextBox();
             this.rdbtn_Nu = new System.Windows.Forms.RadioButton();
-            this.rdbtn_Co = new System.Windows.Forms.RadioButton();
-            this.rdbtn_Khong = new System.Windows.Forms.RadioButton();
+            this.rdbtn_LamVC = new System.Windows.Forms.RadioButton();
+            this.rdbtn_nghi = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -84,6 +84,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1198, 125);
             this.panel1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(462, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(263, 34);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Quản lý nhân viên";
             // 
             // tbx_MaNv
             // 
@@ -115,16 +125,6 @@
             this.dgrid_NhanVien.RowTemplate.Height = 29;
             this.dgrid_NhanVien.Size = new System.Drawing.Size(1137, 223);
             this.dgrid_NhanVien.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(462, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(263, 34);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Quản lý nhân viên";
             // 
             // Btn_TimKiem
             // 
@@ -306,27 +306,27 @@
             this.rdbtn_Nu.Text = "Nữ";
             this.rdbtn_Nu.UseVisualStyleBackColor = true;
             // 
-            // rdbtn_Co
+            // rdbtn_LamVC
             // 
-            this.rdbtn_Co.AutoSize = true;
-            this.rdbtn_Co.Location = new System.Drawing.Point(6, 0);
-            this.rdbtn_Co.Name = "rdbtn_Co";
-            this.rdbtn_Co.Size = new System.Drawing.Size(48, 24);
-            this.rdbtn_Co.TabIndex = 2;
-            this.rdbtn_Co.TabStop = true;
-            this.rdbtn_Co.Text = "Có";
-            this.rdbtn_Co.UseVisualStyleBackColor = true;
+            this.rdbtn_LamVC.AutoSize = true;
+            this.rdbtn_LamVC.Location = new System.Drawing.Point(6, 0);
+            this.rdbtn_LamVC.Name = "rdbtn_LamVC";
+            this.rdbtn_LamVC.Size = new System.Drawing.Size(125, 24);
+            this.rdbtn_LamVC.TabIndex = 2;
+            this.rdbtn_LamVC.TabStop = true;
+            this.rdbtn_LamVC.Text = "Đang làm việc";
+            this.rdbtn_LamVC.UseVisualStyleBackColor = true;
             // 
-            // rdbtn_Khong
+            // rdbtn_nghi
             // 
-            this.rdbtn_Khong.AutoSize = true;
-            this.rdbtn_Khong.Location = new System.Drawing.Point(163, 0);
-            this.rdbtn_Khong.Name = "rdbtn_Khong";
-            this.rdbtn_Khong.Size = new System.Drawing.Size(73, 24);
-            this.rdbtn_Khong.TabIndex = 2;
-            this.rdbtn_Khong.TabStop = true;
-            this.rdbtn_Khong.Text = "Không";
-            this.rdbtn_Khong.UseVisualStyleBackColor = true;
+            this.rdbtn_nghi.AutoSize = true;
+            this.rdbtn_nghi.Location = new System.Drawing.Point(163, 0);
+            this.rdbtn_nghi.Name = "rdbtn_nghi";
+            this.rdbtn_nghi.Size = new System.Drawing.Size(92, 24);
+            this.rdbtn_nghi.TabIndex = 2;
+            this.rdbtn_nghi.TabStop = true;
+            this.rdbtn_nghi.Text = "Nghỉ việc";
+            this.rdbtn_nghi.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -350,8 +350,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.rdbtn_Co);
-            this.groupBox2.Controls.Add(this.rdbtn_Khong);
+            this.groupBox2.Controls.Add(this.rdbtn_LamVC);
+            this.groupBox2.Controls.Add(this.rdbtn_nghi);
             this.groupBox2.Location = new System.Drawing.Point(620, 383);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(251, 49);
@@ -445,8 +445,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tbx_Email;
         private System.Windows.Forms.RadioButton rdbtn_Nu;
-        private System.Windows.Forms.RadioButton rdbtn_Co;
-        private System.Windows.Forms.RadioButton rdbtn_Khong;
+        private System.Windows.Forms.RadioButton rdbtn_LamVC;
+        private System.Windows.Forms.RadioButton rdbtn_nghi;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;

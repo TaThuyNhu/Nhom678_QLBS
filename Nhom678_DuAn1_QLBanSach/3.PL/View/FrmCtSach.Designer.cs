@@ -42,8 +42,8 @@
             this.btn_ThemHdCt = new System.Windows.Forms.Button();
             this.tbt_TimKiem = new System.Windows.Forms.TextBox();
             this.Dgrid_CTSach = new System.Windows.Forms.DataGridView();
-            this.rbn_2 = new System.Windows.Forms.RadioButton();
-            this.rbn_1 = new System.Windows.Forms.RadioButton();
+            this.rbn_HetSach = new System.Windows.Forms.RadioButton();
+            this.rbn_ConSach = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -196,27 +196,27 @@
             this.Dgrid_CTSach.Size = new System.Drawing.Size(1081, 188);
             this.Dgrid_CTSach.TabIndex = 53;
             // 
-            // rbn_2
+            // rbn_HetSach
             // 
-            this.rbn_2.AutoSize = true;
-            this.rbn_2.Location = new System.Drawing.Point(533, 454);
-            this.rbn_2.Name = "rbn_2";
-            this.rbn_2.Size = new System.Drawing.Size(120, 24);
-            this.rbn_2.TabIndex = 52;
-            this.rbn_2.TabStop = true;
-            this.rbn_2.Text = "Không tồn tại";
-            this.rbn_2.UseVisualStyleBackColor = true;
+            this.rbn_HetSach.AutoSize = true;
+            this.rbn_HetSach.Location = new System.Drawing.Point(533, 454);
+            this.rbn_HetSach.Name = "rbn_HetSach";
+            this.rbn_HetSach.Size = new System.Drawing.Size(87, 24);
+            this.rbn_HetSach.TabIndex = 52;
+            this.rbn_HetSach.TabStop = true;
+            this.rbn_HetSach.Text = "Hết sách";
+            this.rbn_HetSach.UseVisualStyleBackColor = true;
             // 
-            // rbn_1
+            // rbn_ConSach
             // 
-            this.rbn_1.AutoSize = true;
-            this.rbn_1.Location = new System.Drawing.Point(226, 454);
-            this.rbn_1.Name = "rbn_1";
-            this.rbn_1.Size = new System.Drawing.Size(76, 24);
-            this.rbn_1.TabIndex = 51;
-            this.rbn_1.TabStop = true;
-            this.rbn_1.Text = "Tồn tại";
-            this.rbn_1.UseVisualStyleBackColor = true;
+            this.rbn_ConSach.AutoSize = true;
+            this.rbn_ConSach.Location = new System.Drawing.Point(226, 454);
+            this.rbn_ConSach.Name = "rbn_ConSach";
+            this.rbn_ConSach.Size = new System.Drawing.Size(89, 24);
+            this.rbn_ConSach.TabIndex = 51;
+            this.rbn_ConSach.TabStop = true;
+            this.rbn_ConSach.Text = "Còn sách";
+            this.rbn_ConSach.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -297,8 +297,8 @@
             this.Controls.Add(this.btn_ThemHdCt);
             this.Controls.Add(this.tbt_TimKiem);
             this.Controls.Add(this.Dgrid_CTSach);
-            this.Controls.Add(this.rbn_2);
-            this.Controls.Add(this.rbn_1);
+            this.Controls.Add(this.rbn_HetSach);
+            this.Controls.Add(this.rbn_ConSach);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -331,8 +331,8 @@
         private System.Windows.Forms.Button btn_ThemHdCt;
         private System.Windows.Forms.TextBox tbt_TimKiem;
         private System.Windows.Forms.DataGridView Dgrid_CTSach;
-        private System.Windows.Forms.RadioButton rbn_2;
-        private System.Windows.Forms.RadioButton rbn_1;
+        private System.Windows.Forms.RadioButton rbn_HetSach;
+        private System.Windows.Forms.RadioButton rbn_ConSach;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

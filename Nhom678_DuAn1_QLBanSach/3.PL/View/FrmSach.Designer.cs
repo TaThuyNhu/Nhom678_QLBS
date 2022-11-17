@@ -46,6 +46,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dttime_NgayXuatBan = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbx_TenSach = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_Sach)).BeginInit();
             this.SuspendLayout();
@@ -125,14 +127,14 @@
             // 
             // tbx_MoTa
             // 
-            this.tbx_MoTa.Location = new System.Drawing.Point(152, 365);
+            this.tbx_MoTa.Location = new System.Drawing.Point(152, 411);
             this.tbx_MoTa.Name = "tbx_MoTa";
             this.tbx_MoTa.Size = new System.Drawing.Size(250, 27);
             this.tbx_MoTa.TabIndex = 28;
             // 
             // tbx_SoTrang
             // 
-            this.tbx_SoTrang.Location = new System.Drawing.Point(152, 308);
+            this.tbx_SoTrang.Location = new System.Drawing.Point(152, 354);
             this.tbx_SoTrang.Name = "tbx_SoTrang";
             this.tbx_SoTrang.Size = new System.Drawing.Size(250, 27);
             this.tbx_SoTrang.TabIndex = 26;
@@ -140,7 +142,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(41, 372);
+            this.label10.Location = new System.Drawing.Point(41, 418);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 20);
             this.label10.TabIndex = 29;
@@ -148,7 +150,7 @@
             // 
             // tbx_AnBan
             // 
-            this.tbx_AnBan.Location = new System.Drawing.Point(152, 252);
+            this.tbx_AnBan.Location = new System.Drawing.Point(152, 298);
             this.tbx_AnBan.Name = "tbx_AnBan";
             this.tbx_AnBan.Size = new System.Drawing.Size(250, 27);
             this.tbx_AnBan.TabIndex = 25;
@@ -163,7 +165,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 315);
+            this.label5.Location = new System.Drawing.Point(41, 361);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 20);
             this.label5.TabIndex = 19;
@@ -172,7 +174,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 259);
+            this.label4.Location = new System.Drawing.Point(41, 305);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 18;
@@ -194,7 +196,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 215);
+            this.label3.Location = new System.Drawing.Point(41, 261);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 20);
             this.label3.TabIndex = 24;
@@ -211,10 +213,26 @@
             // 
             // dttime_NgayXuatBan
             // 
-            this.dttime_NgayXuatBan.Location = new System.Drawing.Point(152, 208);
+            this.dttime_NgayXuatBan.Location = new System.Drawing.Point(152, 254);
             this.dttime_NgayXuatBan.Name = "dttime_NgayXuatBan";
             this.dttime_NgayXuatBan.Size = new System.Drawing.Size(250, 27);
             this.dttime_NgayXuatBan.TabIndex = 42;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(41, 210);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 20);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Tên Sách";
+            // 
+            // tbx_TenSach
+            // 
+            this.tbx_TenSach.Location = new System.Drawing.Point(152, 203);
+            this.tbx_TenSach.Name = "tbx_TenSach";
+            this.tbx_TenSach.Size = new System.Drawing.Size(250, 27);
+            this.tbx_TenSach.TabIndex = 20;
             // 
             // FrmSach
             // 
@@ -232,10 +250,12 @@
             this.Controls.Add(this.tbx_SoTrang);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.tbx_AnBan);
+            this.Controls.Add(this.tbx_TenSach);
             this.Controls.Add(this.tbx_MaSach);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgrid_Sach);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -269,5 +289,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dttime_NgayXuatBan;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbx_TenSach;
     }
 }

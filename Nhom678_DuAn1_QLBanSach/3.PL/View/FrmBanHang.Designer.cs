@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBanHang));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lb_tenkh = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tb_sdt = new System.Windows.Forms.TextBox();
             this.lb_TongTien1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_XoaSanPham = new System.Windows.Forms.Button();
@@ -51,7 +47,6 @@
             this.tbx_TienKhachDua = new System.Windows.Forms.TextBox();
             this.tbx_GiamGia = new System.Windows.Forms.TextBox();
             this.btn_ThanhToan = new System.Windows.Forms.Button();
-            this.rtb_ghichu = new System.Windows.Forms.RichTextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -63,6 +58,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btn_ThemSp = new System.Windows.Forms.Button();
+            this.cmb_LHThanhToan = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_GioHang)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -72,13 +70,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lb_tenkh);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.tb_sdt);
             this.groupBox1.Controls.Add(this.lb_TongTien1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btn_XoaSanPham);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btn_XoaHd);
             this.groupBox1.Controls.Add(this.btn_CapNhatHD);
             this.groupBox1.Controls.Add(this.btn_ThemHdCt);
@@ -90,45 +85,11 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Giỏ hàng";
             // 
-            // lb_tenkh
-            // 
-            this.lb_tenkh.AutoSize = true;
-            this.lb_tenkh.Location = new System.Drawing.Point(782, 71);
-            this.lb_tenkh.Name = "lb_tenkh";
-            this.lb_tenkh.Size = new System.Drawing.Size(18, 20);
-            this.lb_tenkh.TabIndex = 38;
-            this.lb_tenkh.Text = "...";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(665, 71);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 20);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Tên khách hàng";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(665, 31);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 20);
-            this.label9.TabIndex = 36;
-            this.label9.Text = "Sđt khách hàng";
-            // 
-            // tb_sdt
-            // 
-            this.tb_sdt.Location = new System.Drawing.Point(781, 27);
-            this.tb_sdt.Name = "tb_sdt";
-            this.tb_sdt.Size = new System.Drawing.Size(125, 27);
-            this.tb_sdt.TabIndex = 35;
-            // 
             // lb_TongTien1
             // 
             this.lb_TongTien1.AutoSize = true;
             this.lb_TongTien1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_TongTien1.Location = new System.Drawing.Point(798, 295);
+            this.lb_TongTien1.Location = new System.Drawing.Point(798, 230);
             this.lb_TongTien1.Name = "lb_TongTien1";
             this.lb_TongTien1.Size = new System.Drawing.Size(27, 31);
             this.lb_TongTien1.TabIndex = 34;
@@ -138,7 +99,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(665, 295);
+            this.label2.Location = new System.Drawing.Point(665, 230);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 31);
             this.label2.TabIndex = 33;
@@ -164,7 +125,7 @@
             this.btn_XoaHd.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_XoaHd.Image = ((System.Drawing.Image)(resources.GetObject("btn_XoaHd.Image")));
             this.btn_XoaHd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_XoaHd.Location = new System.Drawing.Point(168, 295);
+            this.btn_XoaHd.Location = new System.Drawing.Point(338, 295);
             this.btn_XoaHd.Margin = new System.Windows.Forms.Padding(0);
             this.btn_XoaHd.Name = "btn_XoaHd";
             this.btn_XoaHd.Size = new System.Drawing.Size(157, 52);
@@ -178,7 +139,7 @@
             this.btn_CapNhatHD.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_CapNhatHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_CapNhatHD.Image")));
             this.btn_CapNhatHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_CapNhatHD.Location = new System.Drawing.Point(336, 295);
+            this.btn_CapNhatHD.Location = new System.Drawing.Point(506, 295);
             this.btn_CapNhatHD.Margin = new System.Windows.Forms.Padding(0);
             this.btn_CapNhatHD.Name = "btn_CapNhatHD";
             this.btn_CapNhatHD.Size = new System.Drawing.Size(157, 52);
@@ -192,7 +153,7 @@
             this.btn_ThemHdCt.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_ThemHdCt.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThemHdCt.Image")));
             this.btn_ThemHdCt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ThemHdCt.Location = new System.Drawing.Point(502, 295);
+            this.btn_ThemHdCt.Location = new System.Drawing.Point(672, 295);
             this.btn_ThemHdCt.Margin = new System.Windows.Forms.Padding(0);
             this.btn_ThemHdCt.Name = "btn_ThemHdCt";
             this.btn_ThemHdCt.Size = new System.Drawing.Size(157, 52);
@@ -215,6 +176,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btn_ThemSp);
             this.groupBox3.Controls.Add(this.dgrid_SanPham);
             this.groupBox3.Controls.Add(this.tbx_TimkSP);
             this.groupBox3.Controls.Add(this.label1);
@@ -261,12 +223,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cmb_LHThanhToan);
             this.groupBox2.Controls.Add(this.lb_giamgia);
             this.groupBox2.Controls.Add(this.tbx_MaHd);
             this.groupBox2.Controls.Add(this.tbx_TienKhachDua);
             this.groupBox2.Controls.Add(this.tbx_GiamGia);
             this.groupBox2.Controls.Add(this.btn_ThanhToan);
-            this.groupBox2.Controls.Add(this.rtb_ghichu);
             this.groupBox2.Controls.Add(this.label21);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.label19);
@@ -334,23 +296,14 @@
             this.btn_ThanhToan.Text = "THANH TOÁN";
             this.btn_ThanhToan.UseVisualStyleBackColor = false;
             // 
-            // rtb_ghichu
-            // 
-            this.rtb_ghichu.Location = new System.Drawing.Point(165, 291);
-            this.rtb_ghichu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.rtb_ghichu.Name = "rtb_ghichu";
-            this.rtb_ghichu.Size = new System.Drawing.Size(187, 27);
-            this.rtb_ghichu.TabIndex = 38;
-            this.rtb_ghichu.Text = "";
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(38, 300);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(58, 20);
+            this.label21.Size = new System.Drawing.Size(102, 20);
             this.label21.TabIndex = 37;
-            this.label21.Text = "Ghi chú";
+            this.label21.Text = "LH thanh toán";
             // 
             // label20
             // 
@@ -442,6 +395,42 @@
             this.label6.TabIndex = 27;
             this.label6.Text = "Mã hóa đơn ";
             // 
+            // btn_ThemSp
+            // 
+            this.btn_ThemSp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(206)))), ((int)(((byte)(248)))));
+            this.btn_ThemSp.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ThemSp.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThemSp.Image")));
+            this.btn_ThemSp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ThemSp.Location = new System.Drawing.Point(254, 61);
+            this.btn_ThemSp.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_ThemSp.Name = "btn_ThemSp";
+            this.btn_ThemSp.Size = new System.Drawing.Size(182, 42);
+            this.btn_ThemSp.TabIndex = 39;
+            this.btn_ThemSp.Text = "Thêm sản phẩm";
+            this.btn_ThemSp.UseVisualStyleBackColor = false;
+            // 
+            // cmb_LHThanhToan
+            // 
+            this.cmb_LHThanhToan.FormattingEnabled = true;
+            this.cmb_LHThanhToan.Location = new System.Drawing.Point(163, 292);
+            this.cmb_LHThanhToan.Name = "cmb_LHThanhToan";
+            this.cmb_LHThanhToan.Size = new System.Drawing.Size(151, 28);
+            this.cmb_LHThanhToan.TabIndex = 44;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(206)))), ((int)(((byte)(248)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(169, 295);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 52);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Xóa hết SP";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // FrmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -473,10 +462,6 @@
         private System.Windows.Forms.Button btn_XoaSanPham;
         private System.Windows.Forms.Button btn_XoaHd;
         private System.Windows.Forms.Button btn_CapNhatHD;
-        private System.Windows.Forms.Label lb_tenkh;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tb_sdt;
         private System.Windows.Forms.Label lb_TongTien1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -489,7 +474,6 @@
         private System.Windows.Forms.TextBox tbx_TienKhachDua;
         private System.Windows.Forms.TextBox tbx_GiamGia;
         private System.Windows.Forms.Button btn_ThanhToan;
-        private System.Windows.Forms.RichTextBox rtb_ghichu;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
@@ -501,5 +485,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_ThemSp;
+        private System.Windows.Forms.ComboBox cmb_LHThanhToan;
     }
 }

@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace _3.PL.View
 {
-    public partial class FrmGiamGia : Form
+    public partial class FrmLogin : Form
     {
-        public FrmGiamGia()
+        public FrmLogin()
         {
             InitializeComponent();
         }
-
-       
     }
 }

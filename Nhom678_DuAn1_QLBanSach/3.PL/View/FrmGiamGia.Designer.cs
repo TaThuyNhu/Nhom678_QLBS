@@ -44,8 +44,6 @@
             this.rbn_1 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbt_DoiTuongGg = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.tbt_MaGiamGia = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -91,8 +89,6 @@
             this.panel2.Controls.Add(this.rbn_1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.tbt_DoiTuongGg);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.tbt_MaGiamGia);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -103,14 +99,14 @@
             // 
             // dtp_ThoiHan
             // 
-            this.dtp_ThoiHan.Location = new System.Drawing.Point(184, 134);
+            this.dtp_ThoiHan.Location = new System.Drawing.Point(184, 86);
             this.dtp_ThoiHan.Name = "dtp_ThoiHan";
             this.dtp_ThoiHan.Size = new System.Drawing.Size(250, 27);
             this.dtp_ThoiHan.TabIndex = 36;
             // 
             // tbt_PhanTram
             // 
-            this.tbt_PhanTram.Location = new System.Drawing.Point(184, 198);
+            this.tbt_PhanTram.Location = new System.Drawing.Point(184, 150);
             this.tbt_PhanTram.Name = "tbt_PhanTram";
             this.tbt_PhanTram.Size = new System.Drawing.Size(575, 27);
             this.tbt_PhanTram.TabIndex = 33;
@@ -118,7 +114,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 205);
+            this.label7.Location = new System.Drawing.Point(31, 157);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 20);
             this.label7.TabIndex = 32;
@@ -196,7 +192,7 @@
             // rbn_2
             // 
             this.rbn_2.AutoSize = true;
-            this.rbn_2.Location = new System.Drawing.Point(472, 271);
+            this.rbn_2.Location = new System.Drawing.Point(472, 223);
             this.rbn_2.Name = "rbn_2";
             this.rbn_2.Size = new System.Drawing.Size(117, 24);
             this.rbn_2.TabIndex = 25;
@@ -207,7 +203,7 @@
             // rbn_1
             // 
             this.rbn_1.AutoSize = true;
-            this.rbn_1.Location = new System.Drawing.Point(189, 271);
+            this.rbn_1.Location = new System.Drawing.Point(189, 223);
             this.rbn_1.Name = "rbn_1";
             this.rbn_1.Size = new System.Drawing.Size(117, 24);
             this.rbn_1.TabIndex = 24;
@@ -218,7 +214,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 275);
+            this.label4.Location = new System.Drawing.Point(31, 227);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 20);
             this.label4.TabIndex = 23;
@@ -227,27 +223,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 141);
+            this.label3.Location = new System.Drawing.Point(31, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 20);
             this.label3.TabIndex = 21;
             this.label3.Text = "Thời hạn";
-            // 
-            // tbt_DoiTuongGg
-            // 
-            this.tbt_DoiTuongGg.Location = new System.Drawing.Point(184, 76);
-            this.tbt_DoiTuongGg.Name = "tbt_DoiTuongGg";
-            this.tbt_DoiTuongGg.Size = new System.Drawing.Size(575, 27);
-            this.tbt_DoiTuongGg.TabIndex = 20;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 20);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Đói tượng giảm giá";
             // 
             // tbt_MaGiamGia
             // 
@@ -298,8 +278,6 @@
         private System.Windows.Forms.RadioButton rbn_1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbt_DoiTuongGg;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbt_MaGiamGia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbt_PhanTram;
