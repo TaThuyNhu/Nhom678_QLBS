@@ -20,32 +20,34 @@ namespace _2.BUS.Services
         }
         public string Add(CuaHangView cuaHangView)
         {
-            if (cuaHangView == null) return "Them khong thanh cong";
+            if (cuaHangView == null) return "Thêm không thành công ";
             var obj = new CuaHang()
             {
-                MaCh = cuaHangView.Ma,
-                TenCh = cuaHangView.Ten,
+                IdCuaHang = cuaHangView.IdCuaHang,
+                MaCuaHang = cuaHangView.MaCuaHang,
+                TenCuaHang = cuaHangView.TenCuaHang,
                 DiaChi = cuaHangView.DiaChi,
                 //TrangThai = cuaHangView.TrangThai,
             };
             if (_iCuaHangRepository.AddCuaHang(obj))
-                return "Them thanh cong";
-            return "Them khong thanh cong";
+                return "Thêm thành công ";
+            return "Thêm không thành công ";
         }
 
         public string Delete(CuaHangView cuaHangView)
         {
-            if (cuaHangView == null) return "Xoa khong thanh cong";
+            if (cuaHangView == null) return "Xóa không thành công";
             var obj = new CuaHang()
             {
-                MaCh = cuaHangView.Ma,
-                TenCh = cuaHangView.Ten,
+                IdCuaHang = cuaHangView.IdCuaHang,
+                MaCuaHang = cuaHangView.MaCuaHang,
+                TenCuaHang = cuaHangView.TenCuaHang,
                 DiaChi = cuaHangView.DiaChi,
                 //TrangThai = cuaHangView.TrangThai,
             };
             if (_iCuaHangRepository.DeleteCuaHang(obj))
-                return "Xoa thanh cong";
-            return "Xoa khong thanh cong";
+                return "Xóa thành công";
+            return "Xóa không thành công";
         }
 
         public List<CuaHangView> GetAll()
@@ -54,8 +56,9 @@ namespace _2.BUS.Services
             list = (from n in _iCuaHangRepository.GetAllCuaHang()
                     select new CuaHangView
                     {
-                        Ma = n.MaCh,
-                        Ten = n.TenCh,
+                        IdCuaHang = n.IdCuaHang,
+                        MaCuaHang = n.MaCuaHang,
+                        TenCuaHang = n.TenCuaHang,
                         DiaChi = n.DiaChi,
                         //TrangThai = n.TrangThai,
                     }).ToList();
@@ -69,17 +72,18 @@ namespace _2.BUS.Services
 
         public string Update(CuaHangView cuaHangView)
         {
-            if (cuaHangView == null) return "Sua khong thanh cong";
+            if (cuaHangView == null) return "Sửa không thành công";
             var obj = new CuaHang()
             {
-                MaCh = cuaHangView.Ma,
-                TenCh = cuaHangView.Ten,
+                IdCuaHang = cuaHangView.IdCuaHang,
+                MaCuaHang = cuaHangView.MaCuaHang,
+                TenCuaHang = cuaHangView.TenCuaHang,
                 DiaChi = cuaHangView.DiaChi,
                 //TrangThai = cuaHangView.TrangThai,
             };
             if (_iCuaHangRepository.UpdateCuaHang(obj))
-                return "Sua thanh cong";
-            return "Sua khong thanh cong";
+                return "Sửa  thành công";
+            return "Sửa không thành côngg";
         }
     }
 }

@@ -10,9 +10,11 @@ namespace _2.BUS.ViewModels
 {
     public class TacGiaView
     {
+        public Guid IdTacGia { get; set; }
         public string MaTacGia { get; set; }
         public string TenTacGia { get; set; }
         public string MoTa { get; set; }
         public string Url { get; set; }
+
     }
 }

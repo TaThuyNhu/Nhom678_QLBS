@@ -23,8 +23,10 @@ namespace _2.BUS.Services
             if (cvView == null) return "Them khong thanh cong";
             var obj = new ChucVu()
             {
-                MaCv = cvView.Ma,
-                TenCv = cvView.Ten,
+                IdChucVu = cvView.IdChucVu,
+                MaChucVu = cvView.MaChucVu,
+                TenChucVu = cvView.TenChucVu,
+                TrangThai = cvView.TrangThai,
             };
             if (_iChucVuRepository.AddChucVu(obj))
                 return "Them thanh cong";
@@ -33,15 +35,17 @@ namespace _2.BUS.Services
 
         public string Delete(ChucVuView cvView)
         {
-            if (cvView == null) return "Xoa khong thanh cong";
+            if (cvView == null) return "Xóa không thành công";
             var obj = new ChucVu()
             {
-                MaCv = cvView.Ma,
-                TenCv = cvView.Ten,
+                IdChucVu = cvView.IdChucVu,
+                MaChucVu = cvView.MaChucVu,
+                TenChucVu = cvView.TenChucVu,
+                TrangThai = cvView.TrangThai,
             };
             if (_iChucVuRepository.DeleteChucVu(obj))
-                return "Xoa thanh cong";
-            return "Xoa khong thanh cong";
+                return "Xóa thành công";
+            return "Xóa không thành công";
         }
 
         public List<ChucVuView> GetAll()
@@ -50,24 +54,27 @@ namespace _2.BUS.Services
             list = (from a in _iChucVuRepository.GetAllChucVu()
                     select new ChucVuView
                     {
-
-                        Ma = a.MaCv,
-                        Ten = a.TenCv,
+                        IdChucVu=a.IdChucVu,
+                        MaChucVu = a.MaChucVu,
+                        TenChucVu = a.TenChucVu,
+                        TrangThai=a.TrangThai,
                     }).ToList();
             return list;
         }
 
         public string Update(ChucVuView cvView)
         {
-            if (cvView == null) return "Sua khong thanh cong";
+            if (cvView == null) return "Sửa không thành công";
             var obj = new ChucVu()
             {
-                MaCv = cvView.Ma,
-                TenCv = cvView.Ten,
+                IdChucVu = cvView.IdChucVu,
+                MaChucVu = cvView.MaChucVu,
+                TenChucVu = cvView.TenChucVu,
+                TrangThai = cvView.TrangThai,
             };
             if (_iChucVuRepository.UpdateChucVu(obj))
-                return "Sua thanh cong";
-            return "Sua khong thanh cong";
+                return "Sửa thành công";
+            return "Sửa không thành công";
         }
     }
 }

@@ -20,17 +20,24 @@ namespace _1.DAL.Repositories
         }
         public bool AddGiamGia(GiamGium gg)
         {
-            throw new NotImplementedException();
+            if (gg == null) return false;
+            _dBContext.GiamGia.Add(gg);
+            _dBContext.SaveChanges();
+            return true;
         }
 
         public bool DeleteGiamGia(GiamGium gg)
         {
-            throw new NotImplementedException();
+            if (gg == null) return false;
+            var temp = _dBContext.GiamGia.FirstOrDefault(c => c.MaGiamGia == gg.MaGiamGia);
+            _dBContext.GiamGia.Remove(temp);
+            _dBContext.SaveChanges();
+            return true;
         }
 
         public List<GiamGium> GetAllGiamGia()
         {
-            throw new NotImplementedException();
+            return giamGia = _dBContext.GiamGia.ToList();
         }
 
         public GiamGium GetById(Guid Ma)
@@ -40,7 +47,11 @@ namespace _1.DAL.Repositories
 
         public bool UpdateGiamGia(GiamGium gg)
         {
-            throw new NotImplementedException();
+            if (gg == null) return false;
+            var temp = _dBContext.GiamGia.FirstOrDefault(c => c.MaGiamGia == gg.MaGiamGia);
+            _dBContext.GiamGia.Remove(temp);
+            _dBContext.SaveChanges();
+            return true;
         }
     }
 }

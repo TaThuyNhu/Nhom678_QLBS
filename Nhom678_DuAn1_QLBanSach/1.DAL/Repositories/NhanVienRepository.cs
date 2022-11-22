@@ -51,16 +51,6 @@ namespace _1.DAL.Repositories
         {
             if (nv == null) return false;
             var obj = _dBContext.NhanViens.FirstOrDefault(c => c.MaNhanVien == nv.MaNhanVien);
-            obj.MaChucVu = nv.MaChucVu;
-            obj.MaCh = nv.MaCh;
-            obj.HoTen = nv.HoTen;
-            obj.Tuoi = nv.Tuoi;
-            obj.QueQuan = nv.QueQuan;
-            obj.GioiTinh = nv.GioiTinh;
-            obj.SoDienThoai = nv.SoDienThoai;
-            obj.Email = nv.Email;
-            obj.TrangThai = nv.TrangThai;
-
             _dBContext.Update(obj);
             _dBContext.SaveChanges();
             return true;

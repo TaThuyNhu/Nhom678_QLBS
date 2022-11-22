@@ -17,6 +17,7 @@ namespace _1.DAL.Repositories
         public ChiTietSPRepository()
         {
             _dBContext = new Nhom678();
+            chiTietSaches = new List<ChiTietSach>();
         }
 
         public bool AddChiTietSach(ChiTietSach cts)

@@ -11,12 +11,13 @@ namespace _2.BUS.ViewModels
 {
     public class HoaDonView
     {
+        public Guid IdHoaDon { get; set; }
         public string MaHoaDon { get; set; }
-        public string MaKhachHang { get; set; }
-        public string MaNhanVien { get; set; }
+        public Guid? IdLoaiGiaoDich { get; set; }
+        public Guid? IdNhanVien { get; set; }
         public DateTime NgayTaoDon { get; set; }
         public DateTime NgayShip { get; set; }
         public DateTime NgayNhan { get; set; }
-        public int TrangThai { get; set; }
+        public string TrangThai { get; set; }
     }
 }

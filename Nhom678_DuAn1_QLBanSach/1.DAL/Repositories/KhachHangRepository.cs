@@ -53,14 +53,6 @@ namespace _1.DAL.Repositories
         {
             if (kh == null) return false;
             var temp = _dbContext.KhachHangs.FirstOrDefault(p => p.MaKhachHang == kh.MaKhachHang);
-            //temp.Ma = kh.Ma;
-            temp.HoTen = kh.HoTen;
-            temp.GioiTinh = kh.GioiTinh;
-            temp.Tuoi = kh.Tuoi;
-            //temp.SoDienThoai = kh.SoDienThoai;
-            temp.Email = kh.Email;
-            temp.DiaChi = kh.DiaChi;
-            temp.TrangThai = kh.TrangThai;
             _dbContext.KhachHangs.Update(temp);
             _dbContext.SaveChanges();
             return true;

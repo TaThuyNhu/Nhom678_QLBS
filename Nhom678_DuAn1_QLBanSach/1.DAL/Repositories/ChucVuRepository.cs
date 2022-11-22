@@ -33,7 +33,7 @@ namespace _1.DAL.Repositories
         public bool DeleteChucVu(ChucVu cv)
         {
             if (cv == null) return false;
-            var temp = _dBContext.ChucVus.FirstOrDefault(c => c.MaCv == cv.MaCv);
+            var temp = _dBContext.ChucVus.FirstOrDefault(c => c.MaChucVu == cv.MaChucVu);
             _dBContext.ChucVus.Remove(temp);
             _dBContext.SaveChanges();
             return true;
@@ -57,8 +57,8 @@ namespace _1.DAL.Repositories
         public bool UpdateChucVu(ChucVu cv)
         {
             if (cv == null) return false;
-            var temp = _dBContext.ChucVus.FirstOrDefault(c => c.MaCv == cv.MaCv);
-            temp.TenCv = cv.TenCv;
+            var temp = _dBContext.ChucVus.FirstOrDefault(c => c.MaChucVu == cv.MaChucVu);
+            //temp.TenChucVu = cv.TenChucVu;
             _dBContext.ChucVus.Update(temp);
             _dBContext.SaveChanges();
             return true;

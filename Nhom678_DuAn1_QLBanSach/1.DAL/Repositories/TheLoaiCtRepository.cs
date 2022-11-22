@@ -49,9 +49,6 @@ namespace _1.DAL.Repositories
         {
             if (tlct == null) return false;
             var temp = _dBContext.TheLoaiChiTiets.FirstOrDefault(c => c.MaTheLoaiChiTiet == tlct.MaTheLoaiChiTiet);
-            //temp.Ma = obj.Ma;
-            temp.TenTheLoai = tlct.TenTheLoai;
-            temp.TrangThai = tlct.TrangThai;
             _dBContext.TheLoaiChiTiets.Update(temp);
             _dBContext.SaveChanges();
             return true;

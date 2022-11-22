@@ -19,28 +19,30 @@ namespace _2.BUS.Services
 
         public string Add(TheLoaiView tlView)
         {
-            if (tlView == null) return "Them khong thanh cong";
+            if (tlView == null) return "Thêm không thành công ";
             var obj = new TheLoai()
             {
+                IdTheLoai = tlView.IdTheLoai,
                 MaTheLoai = tlView.MaTheLoai,
                 MoTa = tlView.MoTa,
             };
             if (_iTtheLoaiRepository.AddTheLoai(obj))
-                return "Them thanh cong";
-            return "Them khong thanh cong";
+                return "Thêm thành công ";
+            return "Thêm không thành công ";
         }
 
         public string Delete(TheLoaiView tlView)
         {
-            if (tlView == null) return "Xoa khong thanh cong";
+            if (tlView == null) return "Xóa không thành công";
             var obj = new TheLoai()
             {
+                IdTheLoai = tlView.IdTheLoai,
                 MaTheLoai = tlView.MaTheLoai,
                 MoTa = tlView.MoTa,
             };
             if (_iTtheLoaiRepository.DeleteTheLoai(obj))
-                return "Xoa thanh cong";
-            return "Xoa khong thanh cong";
+                return "Xóa thành côngg";
+            return "Xóa không thành công";
         }
 
         public List<TheLoaiView> GetAll()
@@ -49,6 +51,7 @@ namespace _2.BUS.Services
             list = (from a in _iTtheLoaiRepository.GetAllTheLoai()
                     select new TheLoaiView
                     {
+                        IdTheLoai=a.IdTheLoai,
                         MaTheLoai = a.MaTheLoai,
                         MoTa = a.MoTa,
                     }).ToList();
@@ -57,15 +60,16 @@ namespace _2.BUS.Services
 
         public string Update(TheLoaiView tlView)
         {
-            if (tlView == null) return "Sua khong thanh cong";
+            if (tlView == null) return "Sửa không thành công";
             var obj = new TheLoai()
             {
+                IdTheLoai = tlView.IdTheLoai,
                 MaTheLoai = tlView.MaTheLoai,
                 MoTa = tlView.MoTa,
             };
             if (_iTtheLoaiRepository.UpdateTheLoai(obj))
-                return "Sua thanh cong";
-            return "Sua khong thanh cong";
+                return "Sửa thành công";
+            return "Sửa không thành công";
         }
     }
 }

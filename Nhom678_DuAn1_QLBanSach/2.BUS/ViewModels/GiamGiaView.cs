@@ -11,7 +11,8 @@ namespace _2.BUS.ViewModels
 {
     public class GiamGiaView
     {
-        public string MaGg { get; set; }
+        public Guid IdGiamGia { get; set; }
+        public string MaGiamGia { get; set; }
         public string DoiTuongGg { get; set; }
         public DateTime ThoiHan { get; set; }
         public double PhanTram { get; set; }

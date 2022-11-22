@@ -10,8 +10,9 @@ namespace _2.BUS.ViewModels
 {
     public class TheLoaiView
     {
+        public Guid IdTheLoai { get; set; }
         public string MaTheLoai { get; set; }
         public string MoTa { get; set; }
-        public int? TrangThai { get; set; }
+
     }
 }

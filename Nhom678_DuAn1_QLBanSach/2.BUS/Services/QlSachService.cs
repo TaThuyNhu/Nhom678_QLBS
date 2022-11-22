@@ -14,76 +14,70 @@ namespace _2.BUS.Services
     public class QlSachService : ISachService
     {
         private ISanPhamRepository _iPhamRepository;
-        private ITheLoaiCtRepository _iLoaiCtRepository;
 
         public QlSachService()
         {
             _iPhamRepository = new SanPhamRepository();
-            _iLoaiCtRepository = new TheLoaiCtRepository();
         }
 
         public string Add(SachView sachView)
         {
-            if (sachView == null) return "Them khong thanh cong";
+            if (sachView == null) return "Thêm không thành công ";
             var obj = new Sach()
             {
+                IdSach = sachView.IdSach,
                 MaSach = sachView.MaSach,
-                //MaTheLoaiChiTiet = sachView.MaTheLoaiChiTiet,
+                TenSach = sachView.TenSach,
                 NgayXuatBan = sachView.NgayXuatBan,
                 SoTrang = sachView.SoTrang,
-                //SoLuong = sachView.SoLuong,
-                //TacGia = sachView.TacGia,
+                SoLuong = sachView.SoLuong,
+                AnBan = sachView.AnBan,
                 MoTa = sachView.MoTa,
-                //NgayNhap = sachView.NgayNhap,
-                //NgayXuat = sachView.NgayXuat,
-                //SoLuongConLai = sachView.SoLuongConLai,
-                //TrangThai = sachView.TrangThai,
+                NgayNhap = sachView.NgayNhap,
+                NgayXuat = sachView.NgayXuat,
             };
             if (_iPhamRepository.AddSach(obj))
-                return "Them thanh cong";
-            return "Them khong thanh cong";
+                return "Thêm thành công ";
+            return "TThêm không thành công ";
         }
 
         public string Delete(SachView sachView)
         {
-            if (sachView == null) return "Xoa khong thanh cong";
+            if (sachView == null) return "Xóa không thành công";
             var obj = new Sach()
             {
+                IdSach = sachView.IdSach,
                 MaSach = sachView.MaSach,
-                //MaTheLoaiChiTiet = sachView.MaTheLoaiChiTiet,
+                TenSach = sachView.TenSach,
                 NgayXuatBan = sachView.NgayXuatBan,
                 SoTrang = sachView.SoTrang,
-                //SoLuong = sachView.SoLuong,
-                //TacGia = sachView.TacGia,
+                SoLuong = sachView.SoLuong,
+                AnBan = sachView.AnBan,
                 MoTa = sachView.MoTa,
-                //NgayNhap = sachView.NgayNhap,
-                //NgayXuat = sachView.NgayXuat,
-                //SoLuongConLai = sachView.SoLuongConLai,
-                //TrangThai = sachView.TrangThai,
+                NgayNhap = sachView.NgayNhap,
+                NgayXuat = sachView.NgayXuat,
             };
         if (_iPhamRepository.DeleteSach(obj))
-                return "Xoa thanh cong";
-            return "Xoa khong thanh cong";
+                return "Xóa thành công";
+            return "Xóa không thành công";
         }
 
         public List<SachView> GetAll()
         {
             List<SachView> list = new List<SachView>();
             list = (from n in _iPhamRepository.GetAllSach()
-                    //join a in _iLoaiCtRepository.GetAllTheLoaiCt() on n.MaTheLoaiChiTiet equals a.MaTheLoaiChiTiet
                     select new SachView
                     {
+                        IdSach = n.IdSach,
                         MaSach = n.MaSach,
-                        //MaTheLoaiChiTiet = a.MaTheLoaiChiTiet,
+                        TenSach= n.TenSach,
                         NgayXuatBan = n.NgayXuatBan,
                         SoTrang = n.SoTrang,
-                        //SoLuong = n.SoLuong,
-                        //TacGia = n.TacGia,
+                        SoLuong = n.SoLuong,
+                        AnBan = n.AnBan,
                         MoTa = n.MoTa,
-                        //NgayNhap = n.NgayNhap,
-                        //NgayXuat = n.NgayXuat,
-                        //SoLuongConLai = n.SoLuongConLai,
-                        //TrangThai = n.TrangThai,
+                        NgayNhap = n.NgayNhap,
+                        NgayXuat = n.NgayXuat,
                     }).ToList();
             return list;
         }
@@ -91,24 +85,23 @@ namespace _2.BUS.Services
 
         public string Update(SachView sachView)
         {
-            if (sachView == null) return "Sua khong thanh cong";
+            if (sachView == null) return "Sửa không thành công";
             var obj = new Sach()
             {
+                IdSach = sachView.IdSach,
                 MaSach = sachView.MaSach,
-                //MaTheLoaiChiTiet = sachView.MaTheLoaiChiTiet,
+                TenSach = sachView.TenSach,
                 NgayXuatBan = sachView.NgayXuatBan,
                 SoTrang = sachView.SoTrang,
-                //SoLuong = sachView.SoLuong,
-                //TacGia = sachView.TacGia,
+                SoLuong = sachView.SoLuong,
+                AnBan = sachView.AnBan,
                 MoTa = sachView.MoTa,
-                //NgayNhap = sachView.NgayNhap,
-                //NgayXuat = sachView.NgayXuat,
-                //SoLuongConLai = sachView.SoLuongConLai,
-                //TrangThai = sachView.TrangThai,
+                NgayNhap = sachView.NgayNhap,
+                NgayXuat = sachView.NgayXuat,
             };
             if (_iPhamRepository.UpdateSach(obj))
-                return "Sua thanh cong";
-            return "Sua khong thanh cong";
+                return "Sửa thành công";
+            return "Sửa không thành công";
         }
 
     }

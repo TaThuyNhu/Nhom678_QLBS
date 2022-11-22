@@ -20,40 +20,42 @@ namespace _2.BUS.Services
         }
         public string Add(KhachHangView kh)
         {
-            if (kh == null) return "Them khong thanh cong";
+            if (kh == null) return "Thêm không thành công ";
             var obj = new KhachHang()
             {
+                IdKhachHang = kh.IdKhachHang,
                 MaKhachHang = kh.MaKhachHang,
                 HoTen = kh.HoTen,
                 GioiTinh = kh.GioiTinh,
                 Tuoi = kh.Tuoi,
-                //SoDienThoai = kh.SoDienThoai,
+                Sdt = kh.Sdt,
                 Email = kh.Email,
                 DiaChi = kh.DiaChi,
                 TrangThai = kh.TrangThai,
             };
             if (_iKhachHangRepository.AddKhachHang(obj))
-                return "Them thanh cong";
-            return "Them khong thanh cong";
+                return "Thêm thành công ";
+            return "Thêm không thành công ";
         }
 
         public string Delete(KhachHangView kh)
         {
-            if (kh == null) return "Xoa khong thanh cong";
+            if (kh == null) return "Xóa không thành công";
             var obj = new KhachHang()
             {
+                IdKhachHang = kh.IdKhachHang,
                 MaKhachHang = kh.MaKhachHang,
                 HoTen = kh.HoTen,
                 GioiTinh = kh.GioiTinh,
                 Tuoi = kh.Tuoi,
-                //SoDienThoai = kh.SoDienThoai,
+                Sdt = kh.Sdt,
                 Email = kh.Email,
                 DiaChi = kh.DiaChi,
                 TrangThai = kh.TrangThai,
             };
             if (_iKhachHangRepository.DeleteKhachHang(obj))
-                return "Xoa thanh cong";
-            return "Xoa khong thanh cong";
+                return "Xóa thành công";
+            return "Xóa không thành công";
         }
 
         public List<KhachHangView> GetAll()
@@ -66,7 +68,7 @@ namespace _2.BUS.Services
                         HoTen = a.HoTen,
                         GioiTinh = a.GioiTinh,
                         Tuoi = a.Tuoi,
-                        //SoDienThoai = a.SoDienThoai,
+                        Sdt = a.Sdt,
                         Email = a.Email,
                         DiaChi = a.DiaChi,
                         TrangThai = a.TrangThai,
@@ -76,21 +78,22 @@ namespace _2.BUS.Services
 
         public string Update(KhachHangView kh)
         {
-            if (kh == null) return "Sua khong thanh cong";
+            if (kh == null) return "Sửa không thành công";
             var obj = new KhachHang()
             {
+                IdKhachHang = kh.IdKhachHang,
                 MaKhachHang = kh.MaKhachHang,
                 HoTen = kh.HoTen,
                 GioiTinh = kh.GioiTinh,
                 Tuoi = kh.Tuoi,
-                //SoDienThoai = kh.SoDienThoai,
+                Sdt = kh.Sdt,
                 Email = kh.Email,
                 DiaChi = kh.DiaChi,
                 TrangThai = kh.TrangThai,
             };
             if (_iKhachHangRepository.UpdateKhachHang(obj))
-                return "Sua thanh cong";
-            return "Sua khong thanh cong";
+                return "Sửa thành công";
+            return "Sửa không thành công";
         }
     }
 }

@@ -51,12 +51,6 @@ namespace _1.DAL.Repositories
         {
             if (hd == null) return false;
             var temp = _dBContext.HoaDons.FirstOrDefault(c => c.MaHoaDon == hd.MaHoaDon);
-            //temp.Ma = obj.Ma;
-            //temp.MaKhachHang = hd.MaKhachHang;
-            temp.MaNhanVien = hd.MaNhanVien;
-            temp.NgayShip = hd.NgayShip;
-            temp.NgayNhan = hd.NgayNhan;
-            temp.TrangThai = hd.TrangThai;
             _dBContext.HoaDons.Update(temp);
             _dBContext.SaveChanges();
             return true;

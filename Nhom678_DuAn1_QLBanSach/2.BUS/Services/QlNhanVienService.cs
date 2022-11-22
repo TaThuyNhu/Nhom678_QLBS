@@ -26,13 +26,14 @@ namespace _2.BUS.Services
         {
             if (nvv == null)
             {
-                return "Them khong thanh cong";
+                return "Thêm không thành công ";
             }
             var temp = new NhanVien()
             {
+                IdNhanVien = nvv.IdNhanVien,
                 MaNhanVien = nvv.MaNhanVien,
-                MaChucVu = nvv.MaChucVu,
-                MaCh = nvv.MaCh,
+                IdChucVu = nvv.IdChucVu,
+                IdCuaHang = nvv.IdCuaHang,
                 HoTen = nvv.HoTen,
                 Tuoi = nvv.Tuoi,
                 QueQuan = nvv.QueQuan,
@@ -42,8 +43,8 @@ namespace _2.BUS.Services
                 TrangThai = nvv.TrangThai,
             };
             if (_iNvRepository.AddNhanVien(temp))
-                return "Them thanh cong";
-            return "Them khong thanh cong";
+                return "Thêm thành công ";
+            return "Thêm không thành công ";
         }
 
         public string Delete(NhanVienView nvv)
@@ -52,9 +53,10 @@ namespace _2.BUS.Services
 
             var temp = new NhanVien()
             {
+                IdNhanVien = nvv.IdNhanVien,
                 MaNhanVien = nvv.MaNhanVien,
-                MaChucVu = nvv.MaChucVu,
-                MaCh = nvv.MaCh,
+                IdChucVu = nvv.IdChucVu,
+                IdCuaHang = nvv.IdCuaHang,
                 HoTen = nvv.HoTen,
                 Tuoi = nvv.Tuoi,
                 QueQuan = nvv.QueQuan,
@@ -75,13 +77,14 @@ namespace _2.BUS.Services
         {
             List<NhanVienView> nvView = new List<NhanVienView>();
             nvView = (from a in _iNvRepository.GetAllNhanVien()
-                      join b in _cuaHangRepository.GetAllCuaHang() on a.MaCh equals b.MaCh
-                      join c in _chucVuRepository.GetAllChucVu() on a.MaChucVu equals c.MaCv
+                      join b in _cuaHangRepository.GetAllCuaHang() on a.IdCuaHang equals b.IdCuaHang
+                      join c in _chucVuRepository.GetAllChucVu() on a.IdChucVu equals c.IdChucVu
                       select new NhanVienView
                       {
+                          IdNhanVien = a.IdNhanVien,
                           MaNhanVien = a.MaNhanVien,
-                          MaChucVu = c.MaCv,
-                          MaCh = b.MaCh,
+                          IdCuaHang = b.IdCuaHang,
+                          IdChucVu = c.IdChucVu,
                           HoTen = a.HoTen,
                           Tuoi = a.Tuoi,
                           QueQuan = a.QueQuan,
@@ -98,9 +101,10 @@ namespace _2.BUS.Services
             if (nvv == null) return "Sửa không thành công";
             var temp = new NhanVien()
             {
+                IdNhanVien = nvv.IdNhanVien,
                 MaNhanVien = nvv.MaNhanVien,
-                MaChucVu = nvv.MaChucVu,
-                MaCh = nvv.MaCh,
+                IdChucVu = nvv.IdChucVu,
+                IdCuaHang = nvv.IdCuaHang,
                 HoTen = nvv.HoTen,
                 Tuoi = nvv.Tuoi,
                 QueQuan = nvv.QueQuan,

@@ -10,6 +10,7 @@ namespace _2.BUS.ViewModels
 {
     public class NxbView
     {
+        public Guid IdNxb { get; set; }
         public string MaNxb { get; set; }
         public string TenNxb { get; set; }
         public string DiaChi { get; set; }

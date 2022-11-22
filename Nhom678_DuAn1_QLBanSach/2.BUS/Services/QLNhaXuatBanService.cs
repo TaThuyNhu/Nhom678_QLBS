@@ -19,32 +19,34 @@ namespace _2.BUS.Services
         }
         public string Add(NxbView nxb)
         {
-            if (nxb == null) return "Them khong thanh cong";
+            if (nxb == null) return "Thêm không thành công ";
             var khohang = new NhaXuatBan()
             {
+                IdNxb = nxb.IdNxb,
                 MaNxb = nxb.MaNxb,
                 TenNxb = nxb.TenNxb,
                 DiaChi = nxb.DiaChi,
                 Url = nxb.Url,
             };
             if (_nhaXuatBanRepository.AddNhaXuatBan(khohang))
-                return "Them thanh cong";
-            return "Them khong thanh cong";
+                return "Thêm thành công ";
+            return "Thêm không thành công ";
         }
 
         public string Delete(NxbView nxb)
         {
-            if (nxb == null) return "xoa khong thanh cong";
+            if (nxb == null) return "Xóa không thành công";
             var nhaXuatBan = new NhaXuatBan()
             {
+                IdNxb = nxb.IdNxb,
                 MaNxb = nxb.MaNxb,
                 TenNxb = nxb.TenNxb,
                 DiaChi = nxb.DiaChi,
                 Url = nxb.Url,
             };
             if (_nhaXuatBanRepository.DeleteNhaXuatBan(nhaXuatBan))
-                return "xoa thanh cong";
-            return "xoa khong thanh cong";
+                return "Xóa thành công";
+            return "Xóa không thành công";
         }
 
         public List<NxbView> GetAll()
@@ -53,6 +55,7 @@ namespace _2.BUS.Services
             list = (from n in _nhaXuatBanRepository.GetAllNhaXuatBan()
                     select new NxbView
                     {
+                        IdNxb = n.IdNxb,
                         MaNxb = n.MaNxb,
                         TenNxb= n.TenNxb,
                         DiaChi= n.DiaChi,
@@ -63,17 +66,18 @@ namespace _2.BUS.Services
 
         public string Update(NxbView nxb)
         {
-            if (nxb == null) return "sua khong thanh cong";
+            if (nxb == null) return "Sửa không thành công";
             var nhaXuatBan = new NhaXuatBan()
             {
+                IdNxb = nxb.IdNxb,
                 MaNxb = nxb.MaNxb,
                 TenNxb = nxb.TenNxb,
                 DiaChi = nxb.DiaChi,
                 Url = nxb.Url,
             };
             if (_nhaXuatBanRepository.UpdateNhaXuatBan(nhaXuatBan))
-                return "sua thanh cong";
-            return "sua khong thanh cong";
+                return "Sửa thành công";
+            return "Sửa không thành công";
         }
     }
 }

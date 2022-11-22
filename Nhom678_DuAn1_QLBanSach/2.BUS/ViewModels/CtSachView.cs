@@ -12,13 +12,14 @@ namespace _2.BUS.ViewModels
 {
     public class CtSachView
     {
+        public Guid IdChiTietSach { get; set; }
         public string MaChiTietSach { get; set; }
-        public string MaTheLoaiChiTiet { get; set; }
-        public string MaNxb { get; set; }
-        public string MaTacGia { get; set; }
-        public string MaSach { get; set; }
-        public string MaKho { get; set; }
+        public Guid? IdTheLoaiChiTiet { get; set; }
+        public Guid? IdNxb { get; set; }
+        public Guid? IdTacGia { get; set; }
+        public Guid? IdSach { get; set; }
         public string TrangThai { get; set; }
+
 
     }
 }

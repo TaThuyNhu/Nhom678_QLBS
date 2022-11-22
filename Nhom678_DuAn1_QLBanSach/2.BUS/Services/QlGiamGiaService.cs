@@ -19,32 +19,34 @@ namespace _2.BUS.Services
 
         public string Add(GiamGiaView giamGiaView)
         {
-            if (giamGiaView == null) return "Them khong thanh cong";
+            if (giamGiaView == null) return "Thêm không thành công ";
             var obj = new GiamGium()
             {
-                MaGg = giamGiaView.MaGg,
+                IdGiamGia = giamGiaView.IdGiamGia,
+                MaGiamGia = giamGiaView.MaGiamGia,
                 DoiTuongGg = giamGiaView.DoiTuongGg,
                 ThoiHan = giamGiaView.ThoiHan,
                 PhanTram = giamGiaView.PhanTram,
             };
             if (_iGiamGiaRepository.AddGiamGia(obj))
-                return "Them thanh cong";
-            return "Them khong thanh cong";
+                return "Thêm thành công ";
+            return "Thêm không thành công ";
         }
 
         public string Delete(GiamGiaView giamGiaView)
         {
-            if (giamGiaView == null) return "Xoa khong thanh cong";
+            if (giamGiaView == null) return "Xóa không thành công";
             var obj = new GiamGium()
             {
-                MaGg = giamGiaView.MaGg,
+                IdGiamGia = giamGiaView.IdGiamGia,
+                MaGiamGia = giamGiaView.MaGiamGia,
                 DoiTuongGg = giamGiaView.DoiTuongGg,
                 ThoiHan = giamGiaView.ThoiHan,
                 PhanTram = giamGiaView.PhanTram,
             };
             if (_iGiamGiaRepository.DeleteGiamGia(obj))
-                return "Xoa thanh cong";
-            return "Xoa khong thanh cong";
+                return "Xóa thành công";
+            return "Xóa không thành công";
         }
 
         public List<GiamGiaView> GetAll()
@@ -53,7 +55,8 @@ namespace _2.BUS.Services
             list = (from a in _iGiamGiaRepository.GetAllGiamGia()
                     select new GiamGiaView
                     {
-                        MaGg = a.MaGg,
+                        IdGiamGia = a.IdGiamGia,
+                        MaGiamGia = a.MaGiamGia,
                         DoiTuongGg = a.DoiTuongGg,
                         ThoiHan = a.ThoiHan,
                         PhanTram = a.PhanTram,
@@ -63,17 +66,18 @@ namespace _2.BUS.Services
 
         public string Update(GiamGiaView giamGiaView)
         {
-            if (giamGiaView == null) return "Sua khong thanh cong";
+            if (giamGiaView == null) return "Sửa không thành công";
             var obj = new GiamGium()
             {
-                MaGg = giamGiaView.MaGg,
+                IdGiamGia = giamGiaView.IdGiamGia,
+                MaGiamGia = giamGiaView.MaGiamGia,
                 DoiTuongGg = giamGiaView.DoiTuongGg,
                 ThoiHan = giamGiaView.ThoiHan,
                 PhanTram = giamGiaView.PhanTram,
             };
             if (_iGiamGiaRepository.UpdateGiamGia(obj))
-                return "Sua thanh cong";
-            return "Sua khong thanh cong";
+                return "Sửa thành công";
+            return "Sửa không thành công";
         }
     }
 }

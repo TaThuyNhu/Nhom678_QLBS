@@ -12,16 +12,16 @@ namespace _2.BUS.ViewModels
 {
     public class SachView
     {
+        public Guid IdSach { get; set; }
         public string MaSach { get; set; }
-        public string MaTheLoaiChiTiet { get; set; }
+        public string TenSach { get; set; }
         public DateTime NgayXuatBan { get; set; }
         public int? SoTrang { get; set; }
-        public int? SoLuong { get; set; }
-        public string TacGia { get; set; }
+        public int AnBan { get; set; }
         public string MoTa { get; set; }
+        public int? SoLuong { get; set; }
         public DateTime NgayNhap { get; set; }
         public DateTime NgayXuat { get; set; }
-        public int? SoLuongConLai { get; set; }
-        public int? TrangThai { get; set; }
+
     }
 }

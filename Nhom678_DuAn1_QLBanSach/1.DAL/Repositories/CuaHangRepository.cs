@@ -33,7 +33,7 @@ namespace _1.DAL.Repositories
         public bool DeleteCuaHang(CuaHang obj)
         {
             if (obj == null) return false;
-            var temp = _dBContext.CuaHangs.FirstOrDefault(c => c.MaCh == obj.MaCh);
+            var temp = _dBContext.CuaHangs.FirstOrDefault(c => c.MaCuaHang == obj.MaCuaHang);
             _dBContext.CuaHangs.Remove(temp);
             _dBContext.SaveChanges();
             return true;
@@ -55,9 +55,9 @@ namespace _1.DAL.Repositories
         public bool UpdateCuaHang(CuaHang obj)
         {
             if (obj == null) return false;
-            var temp = _dBContext.CuaHangs.FirstOrDefault(c => c.MaCh == obj.MaCh);
+            var temp = _dBContext.CuaHangs.FirstOrDefault(c => c.MaCuaHang == obj.MaCuaHang);
             //temp.Ma = obj.Ma;
-            temp.TenCh = obj.TenCh;
+            temp.TenCuaHang = obj.TenCuaHang;
             temp.DiaChi = obj.DiaChi;
             //temp.TrangThai = obj.TrangThai;
             _dBContext.CuaHangs.Update(temp);

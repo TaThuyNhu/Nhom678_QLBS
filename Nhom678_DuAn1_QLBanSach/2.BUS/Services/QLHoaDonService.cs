@@ -14,12 +14,12 @@ namespace _2.BUS.Services
     public class QLHoaDonService : IHoaDonService
     {
         private IHoaDonRepository HoaDonRepository;
-        private IKhachHangRepository khachHangRepository;
+        private ILoaiHinhGiaoDichRepository loaiHinhGiaoDichRepository;
         private INhanVienRepository nhanVienRepository;
         public QLHoaDonService()
         {
             HoaDonRepository = new HoaDonRepository();
-            khachHangRepository = new KhachHangRepository();
+            loaiHinhGiaoDichRepository = new LoaiHinhGiaoDichRepository();
             nhanVienRepository = new NhanVienRepository();
         }
 
@@ -27,58 +27,61 @@ namespace _2.BUS.Services
         {
             if (hoaDonView == null)
             {
-                return "Them khong thanh cong";
+                return "Thêm không thành công ";
             }
             var temp = new HoaDon()
             {
+                IdHoaDon = hoaDonView.IdHoaDon,
                 MaHoaDon = hoaDonView.MaHoaDon,
-                //MaKhachHang = hoaDonView.MaKhachHang,
-                MaNhanVien = hoaDonView.MaNhanVien,
+                IdLoaiGiaoDich = hoaDonView.IdLoaiGiaoDich,
+                IdNhanVien = hoaDonView.IdNhanVien,
                 NgayTaoDon = hoaDonView.NgayTaoDon,
                 NgayNhan = hoaDonView.NgayNhan,
                 NgayShip = hoaDonView.NgayShip,
-                //TrangThai = hoaDonView.TrangThai,
+                TrangThai = hoaDonView.TrangThai,
             };
             if (HoaDonRepository.AddHoaDon(temp))
-                return "Them thanh cong";
-            return "Them khong thanh cong";
+                return "Thêm thành công ";
+            return "Thêm không thành công ";
         }
         public string Delete(HoaDonView hoaDonView)
         {
             if (hoaDonView == null)
             {
-                return "Xoa khong thanh cong";
+                return "Xóa không thành công";
             }
             var temp = new HoaDon()
             {
+                IdHoaDon = hoaDonView.IdHoaDon,
                 MaHoaDon = hoaDonView.MaHoaDon,
-                //MaKhachHang = hoaDonView.MaKhachHang,
-                MaNhanVien = hoaDonView.MaNhanVien,
+                IdLoaiGiaoDich = hoaDonView.IdLoaiGiaoDich,
+                IdNhanVien = hoaDonView.IdNhanVien,
                 NgayTaoDon = hoaDonView.NgayTaoDon,
                 NgayNhan = hoaDonView.NgayNhan,
                 NgayShip = hoaDonView.NgayShip,
-                //TrangThai = hoaDonView.TrangThai,
+                TrangThai = hoaDonView.TrangThai,
             };
             if (HoaDonRepository.AddHoaDon(temp))
-                return "Xoa thanh cong";
-            return "Xoa khong thanh cong";
+                return "Xóa thành công";
+            return "Xóa không thành công";
         }
 
         public List<HoaDonView> GetAll()
         {
             List<HoaDonView> list = new List<HoaDonView>();
             list = (from n in HoaDonRepository.GetAllHoaDon()
-                    //join b in khachHangRepository.GetAllKhachHang() on n.MaKhachHang equals b.MaKhachHang
-                    join c in nhanVienRepository.GetAllNhanVien() on n.MaNhanVien equals c.MaNhanVien
+                    join b in loaiHinhGiaoDichRepository.GetAllLoaiHinhGiaoDich() on n.IdLoaiGiaoDich equals b.IdLoaiGiaoDich
+                    join c in nhanVienRepository.GetAllNhanVien() on n.IdNhanVien equals c.IdNhanVien
                     select new HoaDonView
                     {
+                        IdHoaDon = n.IdHoaDon,
                         MaHoaDon = n.MaHoaDon,
-                        //MaKhachHang = b.MaKhachHang,
-                        MaNhanVien = c.MaNhanVien,
+                        IdNhanVien = c.IdNhanVien,
+                        IdLoaiGiaoDich = b.IdLoaiGiaoDich,
                         NgayTaoDon = n.NgayTaoDon,
                         NgayNhan = n.NgayNhan,
                         NgayShip = n.NgayShip,
-                        //TrangThai = n.TrangThai,
+                        TrangThai = n.TrangThai,
                     }).ToList();
             return list;
         }
@@ -87,21 +90,22 @@ namespace _2.BUS.Services
         {
             if (hoaDonView == null)
             {
-                return "Sua khong thanh cong";
+                return "Sửa không thành công";
             }
             var temp = new HoaDon()
             {
+                IdHoaDon = hoaDonView.IdHoaDon,
                 MaHoaDon = hoaDonView.MaHoaDon,
-                //MaKhachHang = hoaDonView.MaKhachHang,
-                MaNhanVien = hoaDonView.MaNhanVien,
+                IdLoaiGiaoDich = hoaDonView.IdLoaiGiaoDich,
+                IdNhanVien = hoaDonView.IdNhanVien,
                 NgayTaoDon = hoaDonView.NgayTaoDon,
                 NgayNhan = hoaDonView.NgayNhan,
                 NgayShip = hoaDonView.NgayShip,
-                //TrangThai = hoaDonView.TrangThai,
+                TrangThai = hoaDonView.TrangThai,
             };
             if (HoaDonRepository.AddHoaDon(temp))
-                return "Sua thanh cong";
-            return "Sua khong thanh cong";
+                return "Sửa thành công";
+            return "Sửa không thành công";
         }
 
 

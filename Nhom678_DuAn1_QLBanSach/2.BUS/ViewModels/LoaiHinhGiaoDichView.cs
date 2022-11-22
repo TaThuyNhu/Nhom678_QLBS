@@ -9,9 +9,11 @@ namespace _2.BUS.ViewModels
 {
     public class LoaiHinhGiaoDichView
     {
+        public Guid IdLoaiGiaoDich { get; set; }
         public string MaLoaiGiaoDich { get; set; }
-        public string MaKhachHang { get; set; }
+        public Guid? IdKhachHang { get; set; }
         public string LoaiHinh1 { get; set; }
         public string LoaiHinh2 { get; set; }
+        public string LoaiHinh3 { get; set; }
     }
 }

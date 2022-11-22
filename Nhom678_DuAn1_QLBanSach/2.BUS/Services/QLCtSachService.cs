@@ -14,7 +14,6 @@ namespace _2.BUS.Services
     public class QLCtSachService : ICtSachService
     {
         private ISanPhamRepository _iSachRepository;
-        private IKhoRepository _iKhoRepository ;
         private ITacGiaRepository _iTacGiaRepository;
         private IChiTietSachRepository _iChiTietSachRepository ;
         private INhaXuatBanRepository _iNhaXuatBanRepository ;
@@ -22,7 +21,6 @@ namespace _2.BUS.Services
         public QLCtSachService()
         {
             _iSachRepository = new SanPhamRepository();
-            _iKhoRepository = new KhoRepository();
             _iTacGiaRepository = new TacGiaRepository();
             _iChiTietSachRepository = new ChiTietSPRepository();
             _iNhaXuatBanRepository = new NhaXuatBanRepository();
@@ -31,38 +29,37 @@ namespace _2.BUS.Services
      
         public string Add(CtSachView ctSachV)
         {
-            if (ctSachV == null) return "Them khong thanh cong";
+            if (ctSachV == null) return "Thêm không thành công ";
             var chiTietSanPham = new ChiTietSach()
             {
+                IdChiTietSach = ctSachV.IdChiTietSach,
                 MaChiTietSach = ctSachV.MaChiTietSach,
-                MaKho = ctSachV.MaKho,
-                MaTacGia = ctSachV.MaTacGia,
-                MaSach = ctSachV.MaSach,
-                MaTheLoaiChiTiet = ctSachV.MaTheLoaiChiTiet,
-                MaNxb =ctSachV.MaNxb,
+                IdTheLoaiChiTiet = ctSachV.IdTheLoaiChiTiet,
+                IdNxb = ctSachV.IdNxb,
+                IdTacGia = ctSachV.IdTacGia,
+                IdSach = ctSachV.IdSach,
                 TrangThai = ctSachV.TrangThai,
             };
             if (_iChiTietSachRepository.AddChiTietSach(chiTietSanPham))
-                return "Them thanh cong";
-            return "Them khong thanh cong";
+                return "Thêm thành công ";
+            return "Thêm không thành công ";
         }
 
         public string Delete(CtSachView ctSachV)
         {
-            if (ctSachV == null) return "Xoa khong thanh cong";
+            if (ctSachV == null) return "Xóa không thành công";
             var chiTietSanPham = new ChiTietSach()
             {
                 MaChiTietSach = ctSachV.MaChiTietSach,
-                MaKho = ctSachV.MaKho,
-                MaTacGia = ctSachV.MaTacGia,
-                MaSach = ctSachV.MaSach,
-                MaTheLoaiChiTiet = ctSachV.MaTheLoaiChiTiet,
-                MaNxb = ctSachV.MaNxb,
+                IdTheLoaiChiTiet = ctSachV.IdTheLoaiChiTiet,
+                IdNxb = ctSachV.IdNxb,
+                IdTacGia = ctSachV.IdTacGia,
+                IdSach = ctSachV.IdSach,
                 TrangThai = ctSachV.TrangThai,
             };
             if (_iChiTietSachRepository.DeleteChiTietSach(chiTietSanPham))
-                return "Xoa thanh cong";
-            return "Xoa khong thanh cong";
+                return "Xóa thành công";
+            return "Xóa không thành công";
         }
 
         public List<CtSachView> GetAll()
@@ -75,19 +72,17 @@ namespace _2.BUS.Services
             List<CtSachView> lstPhamViews = new List<CtSachView>();
             lstPhamViews =
                 (from a in _iChiTietSachRepository.GetAllChiTietSach()
-                 join b in _iSachRepository.GetAllSach() on a.MaSach equals b.MaSach
-                 join c in _iKhoRepository.GetAllKho() on a.MaKho equals c.MaKho
-                 join d in _iTacGiaRepository.GetAllTacGia() on a.MaTacGia equals d.MaTacGia
-                 join e in _iNhaXuatBanRepository.GetAllNhaXuatBan() on a.MaNxb equals e.MaNxb
-                 join f in _iTheLoaiCtRepository.GetAllTheLoaiCt() on a.MaTheLoaiChiTiet equals f.MaTheLoaiChiTiet
+                 join b in _iSachRepository.GetAllSach() on a.IdSach equals b.IdSach
+                 join d in _iTacGiaRepository.GetAllTacGia() on a.IdTacGia equals d.IdTacGia
+                 join e in _iNhaXuatBanRepository.GetAllNhaXuatBan() on a.IdNxb equals e.IdNxb
+                 join f in _iTheLoaiCtRepository.GetAllTheLoaiCt() on a.IdTheLoaiChiTiet equals f.IdTheLoaiChiTiet
                  select new CtSachView
                  {
                      MaChiTietSach = a.MaChiTietSach,
-                     MaSach = b.MaSach,
-                     MaKho = c.MaKho,
-                     MaTacGia = d.MaTacGia,
-                     MaNxb = e.MaNxb,
-                     MaTheLoaiChiTiet = f.MaTheLoaiChiTiet,
+                     IdSach = b.IdSach,
+                     IdTacGia = d.IdTacGia,
+                     IdNxb = e.IdNxb,
+                     IdTheLoaiChiTiet = f.IdTheLoaiChiTiet,
                      TrangThai = a.TrangThai,
                  }
                 ).ToList();
@@ -100,20 +95,19 @@ namespace _2.BUS.Services
         }
         public string Update(CtSachView ctSachV)
         {
-            if (ctSachV == null) return "sua khong thanh cong";
+            if (ctSachV == null) return "Sửa không thành công";
             var chiTietSanPham = new ChiTietSach()
             {
                 MaChiTietSach = ctSachV.MaChiTietSach,
-                MaKho = ctSachV.MaKho,
-                MaTacGia = ctSachV.MaTacGia,
-                MaSach = ctSachV.MaSach,
-                MaTheLoaiChiTiet = ctSachV.MaTheLoaiChiTiet,
-                MaNxb = ctSachV.MaNxb,
+                IdTheLoaiChiTiet = ctSachV.IdTheLoaiChiTiet,
+                IdNxb = ctSachV.IdNxb,
+                IdTacGia = ctSachV.IdTacGia,
+                IdSach = ctSachV.IdSach,
                 TrangThai = ctSachV.TrangThai,
             };
             if (_iChiTietSachRepository.UpdateChiTietSach(chiTietSanPham))
-                return "sua thanh cong";
-            return "sua khong thanh cong";
+                return "Sửa  thành công";
+            return "Sửa không thành công";
         }
     }
 }

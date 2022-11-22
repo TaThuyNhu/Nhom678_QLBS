@@ -20,53 +20,66 @@ namespace _2.BUS.Services
             tacGiaRepository = new TacGiaRepository();
         }
         public string Add(TacGiaView tgV)
-        {
-            if (tgV == null) return "Them khong thanh cong";
+        {c
+            if (tgV == null) return "Thêm không thành công ";
             var khohang = new TacGium()
             {
+                IdTacGia = tgV.IdTacGia,
                 MaTacGia = tgV.MaTacGia,
                 TenTacGia = tgV.TenTacGia,
                 MoTa = tgV.MoTa,
                 Url = tgV.Url,
             };
             if (tacGiaRepository.AddTacGia(khohang))
-                return "Them thanh cong";
-            return "Them khong thanh cong";
+                return "Thêm thành công ";
+            return "Thêm không thành công ";
         }
 
         public string Delete(TacGiaView tgV)
         {
-            if (tgV == null) return "xoa khong thanh cong";
+            if (tgV == null) return "Xóa không thành công";
             var khohang = new TacGium()
             {
+                IdTacGia = tgV.IdTacGia,
                 MaTacGia = tgV.MaTacGia,
                 TenTacGia = tgV.TenTacGia,
                 MoTa = tgV.MoTa,
                 Url = tgV.Url,
             };
             if (tacGiaRepository.DeleteTacGia(khohang))
-                return "xoa thanh cong";
-            return "xoa khong thanh cong";
+                return "Xóa thành công";
+            return "Xóa không thành côngg";
         }
 
         public List<TacGiaView> GetAll()
         {
-            throw new NotImplementedException();
+            List<TacGiaView> list = new List<TacGiaView>();
+            list = (from a in tacGiaRepository.GetAllTacGia()
+                    select new TacGiaView
+                    {
+                        IdTacGia=a.IdTacGia,
+                        MaTacGia = a.MaTacGia,
+                        TenTacGia = a.TenTacGia,
+                        MoTa = a.MoTa,
+                        Url = a.Url,
+                    }).ToList();
+            return list;
         }
 
         public string Update(TacGiaView tgV)
         {
-            if (tgV == null) return "sua khong thanh cong";
+            if (tgV == null) return "Sửa không thành công";
             var khohang = new TacGium()
             {
+                IdTacGia = tgV.IdTacGia,
                 MaTacGia = tgV.MaTacGia,
                 TenTacGia = tgV.TenTacGia,
                 MoTa = tgV.MoTa,
                 Url = tgV.Url,
             };
             if (tacGiaRepository.UpdateTacGia(khohang))
-                return "sua thanh cong";
-            return "sua khong thanh cong";
+                return "Sửa thành công";
+            return "Sửa không thành công";
         }
     }
 }
