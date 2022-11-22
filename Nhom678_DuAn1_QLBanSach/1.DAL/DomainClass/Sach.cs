@@ -17,8 +17,13 @@ namespace _1.DAL.DomainClass
         }
 
         [Key]
+        public Guid IdSach { get; set; }
+        [Required]
         [StringLength(50)]
         public string MaSach { get; set; }
+        [Required]
+        [StringLength(100)]
+        public string TenSach { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime NgayXuatBan { get; set; }
         public int? SoTrang { get; set; }
@@ -26,8 +31,13 @@ namespace _1.DAL.DomainClass
         [Required]
         [StringLength(50)]
         public string MoTa { get; set; }
+        public int? SoLuong { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime NgayNhap { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime NgayXuat { get; set; }
 
-        [InverseProperty(nameof(ChiTietSach.MaSachNavigation))]
+        [InverseProperty(nameof(ChiTietSach.IdSachNavigation))]
         public virtual ICollection<ChiTietSach> ChiTietSaches { get; set; }
     }
 }

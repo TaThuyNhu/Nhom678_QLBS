@@ -17,6 +17,8 @@ namespace _1.DAL.DomainClass
         }
 
         [Key]
+        public Guid IdKhachHang { get; set; }
+        [Required]
         [StringLength(50)]
         public string MaKhachHang { get; set; }
         [Required]
@@ -32,9 +34,10 @@ namespace _1.DAL.DomainClass
         public string Email { get; set; }
         [StringLength(50)]
         public string DiaChi { get; set; }
-        public int TrangThai { get; set; }
+        [StringLength(50)]
+        public string TrangThai { get; set; }
 
-        [InverseProperty(nameof(LoaiHinhGiaoDich.MaKhachHangNavigation))]
+        [InverseProperty(nameof(LoaiHinhGiaoDich.IdKhachHangNavigation))]
         public virtual ICollection<LoaiHinhGiaoDich> LoaiHinhGiaoDiches { get; set; }
     }
 }

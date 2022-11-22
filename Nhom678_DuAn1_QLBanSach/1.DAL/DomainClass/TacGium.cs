@@ -16,6 +16,8 @@ namespace _1.DAL.DomainClass
         }
 
         [Key]
+        public Guid IdTacGia { get; set; }
+        [Required]
         [StringLength(50)]
         public string MaTacGia { get; set; }
         [Required]
@@ -29,7 +31,7 @@ namespace _1.DAL.DomainClass
         [StringLength(50)]
         public string Url { get; set; }
 
-        [InverseProperty(nameof(ChiTietSach.MaTacGiaNavigation))]
+        [InverseProperty(nameof(ChiTietSach.IdTacGiaNavigation))]
         public virtual ICollection<ChiTietSach> ChiTietSaches { get; set; }
     }
 }

@@ -17,13 +17,15 @@ namespace _1.DAL.DomainClass
         }
 
         [Key]
+        public Guid IdTheLoai { get; set; }
+        [Required]
         [StringLength(50)]
         public string MaTheLoai { get; set; }
         [Required]
         [StringLength(100)]
         public string MoTa { get; set; }
 
-        [InverseProperty(nameof(TheLoaiChiTiet.MaTheLoaiNavigation))]
+        [InverseProperty(nameof(TheLoaiChiTiet.IdTheLoaiNavigation))]
         public virtual ICollection<TheLoaiChiTiet> TheLoaiChiTiets { get; set; }
     }
 }

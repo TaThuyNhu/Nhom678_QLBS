@@ -17,20 +17,22 @@ namespace _1.DAL.DomainClass
         }
 
         [Key]
-        [StringLength(50)]
-        public string MaLoaiGiaoDich { get; set; }
+        public Guid IdLoaiGiaoDich { get; set; }
         [Required]
         [StringLength(50)]
-        public string MaKhachHang { get; set; }
+        public string MaLoaiGiaoDich { get; set; }
+        public Guid? IdKhachHang { get; set; }
         [StringLength(50)]
         public string LoaiHinh1 { get; set; }
         [StringLength(50)]
         public string LoaiHinh2 { get; set; }
+        [StringLength(50)]
+        public string LoaiHinh3 { get; set; }
 
-        [ForeignKey(nameof(MaKhachHang))]
+        [ForeignKey(nameof(IdKhachHang))]
         [InverseProperty(nameof(KhachHang.LoaiHinhGiaoDiches))]
-        public virtual KhachHang MaKhachHangNavigation { get; set; }
-        [InverseProperty(nameof(HoaDon.MaLoaiGiaoDichNavigation))]
+        public virtual KhachHang IdKhachHangNavigation { get; set; }
+        [InverseProperty(nameof(HoaDon.IdLoaiGiaoDichNavigation))]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
 }

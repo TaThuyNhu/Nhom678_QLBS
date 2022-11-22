@@ -12,29 +12,26 @@ namespace _1.DAL.DomainClass
     public partial class HoaDonChiTiet
     {
         [Key]
+        public Guid IdHoaDonChiTiet { get; set; }
+        [Required]
         [StringLength(50)]
         public string MaHoaDonChiTiet { get; set; }
-        [Required]
-        [StringLength(50)]
-        public string MaHoaDon { get; set; }
-        [Required]
-        [StringLength(50)]
-        public string MaChiTietSach { get; set; }
-        [Required]
-        [StringLength(50)]
-        public string MaGiamGia { get; set; }
+        public Guid? IdHoaDon { get; set; }
+        public Guid? IdChiTietSach { get; set; }
+        public Guid? IdGiamGia { get; set; }
         public int? GiaGoc { get; set; }
         public int? GiaCuoi { get; set; }
-        public int TrangThai { get; set; }
+        [StringLength(50)]
+        public string TrangThai { get; set; }
 
-        [ForeignKey(nameof(MaChiTietSach))]
+        [ForeignKey(nameof(IdChiTietSach))]
         [InverseProperty(nameof(ChiTietSach.HoaDonChiTiets))]
-        public virtual ChiTietSach MaChiTietSachNavigation { get; set; }
-        [ForeignKey(nameof(MaGiamGia))]
+        public virtual ChiTietSach IdChiTietSachNavigation { get; set; }
+        [ForeignKey(nameof(IdGiamGia))]
         [InverseProperty(nameof(GiamGium.HoaDonChiTiets))]
-        public virtual GiamGium MaGiamGiaNavigation { get; set; }
-        [ForeignKey(nameof(MaHoaDon))]
+        public virtual GiamGium IdGiamGiaNavigation { get; set; }
+        [ForeignKey(nameof(IdHoaDon))]
         [InverseProperty(nameof(HoaDon.HoaDonChiTiets))]
-        public virtual HoaDon MaHoaDonNavigation { get; set; }
+        public virtual HoaDon IdHoaDonNavigation { get; set; }
     }
 }

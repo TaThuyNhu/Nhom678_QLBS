@@ -586,3 +586,7 @@ E:\DuAn1_Nhom678_FPLHN\DuAn1\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug
 E:\DuAn1_Nhom678_FPLHN\DuAn1\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\3.PL.pdb
 E:\DuAn1_Nhom678_FPLHN\DuAn1\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\3.PL.genruntimeconfig.cache
 E:\DuAn1_Nhom678_FPLHN\DuAn1\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\ref\3.PL.dll
+C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmBanHang.resources
+C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmCtSach.resources
+C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmLogin.resources
+C:\Users\FPTSHOP\Desktop\Nhom678_QLBS\Nhom678_DuAn1_QLBanSach\3.PL\obj\Debug\net5.0-windows\_3.PL.View.FrmTheLoai.resources

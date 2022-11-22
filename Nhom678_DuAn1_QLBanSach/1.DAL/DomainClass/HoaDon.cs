@@ -17,14 +17,12 @@ namespace _1.DAL.DomainClass
         }
 
         [Key]
+        public Guid IdHoaDon { get; set; }
+        [Required]
         [StringLength(50)]
         public string MaHoaDon { get; set; }
-        [Required]
-        [StringLength(50)]
-        public string MaLoaiGiaoDich { get; set; }
-        [Required]
-        [StringLength(50)]
-        public string MaNhanVien { get; set; }
+        public Guid? IdLoaiGiaoDich { get; set; }
+        public Guid? IdNhanVien { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime NgayTaoDon { get; set; }
         [Column(TypeName = "datetime")]
@@ -34,13 +32,13 @@ namespace _1.DAL.DomainClass
         [StringLength(50)]
         public string TrangThai { get; set; }
 
-        [ForeignKey(nameof(MaLoaiGiaoDich))]
+        [ForeignKey(nameof(IdLoaiGiaoDich))]
         [InverseProperty(nameof(LoaiHinhGiaoDich.HoaDons))]
-        public virtual LoaiHinhGiaoDich MaLoaiGiaoDichNavigation { get; set; }
-        [ForeignKey(nameof(MaNhanVien))]
+        public virtual LoaiHinhGiaoDich IdLoaiGiaoDichNavigation { get; set; }
+        [ForeignKey(nameof(IdNhanVien))]
         [InverseProperty(nameof(NhanVien.HoaDons))]
-        public virtual NhanVien MaNhanVienNavigation { get; set; }
-        [InverseProperty(nameof(HoaDonChiTiet.MaHoaDonNavigation))]
+        public virtual NhanVien IdNhanVienNavigation { get; set; }
+        [InverseProperty(nameof(HoaDonChiTiet.IdHoaDonNavigation))]
         public virtual ICollection<HoaDonChiTiet> HoaDonChiTiets { get; set; }
     }
 }

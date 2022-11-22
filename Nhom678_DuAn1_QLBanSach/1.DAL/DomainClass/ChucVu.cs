@@ -17,15 +17,17 @@ namespace _1.DAL.DomainClass
         }
 
         [Key]
-        [Column("MaCV")]
-        [StringLength(50)]
-        public string MaCv { get; set; }
+        public Guid IdChucVu { get; set; }
         [Required]
-        [Column("TenCV")]
         [StringLength(50)]
-        public string TenCv { get; set; }
+        public string MaChucVu { get; set; }
+        [Required]
+        [StringLength(50)]
+        public string TenChucVu { get; set; }
+        [StringLength(50)]
+        public string TrangThai { get; set; }
 
-        [InverseProperty(nameof(NhanVien.MaChucVuNavigation))]
+        [InverseProperty(nameof(NhanVien.IdChucVuNavigation))]
         public virtual ICollection<NhanVien> NhanViens { get; set; }
     }
 }

@@ -17,15 +17,12 @@ namespace _1.DAL.DomainClass
         }
 
         [Key]
+        public Guid IdNhanVien { get; set; }
+        [Required]
         [StringLength(50)]
         public string MaNhanVien { get; set; }
-        [Required]
-        [StringLength(50)]
-        public string MaChucVu { get; set; }
-        [Required]
-        [Column("MaCH")]
-        [StringLength(50)]
-        public string MaCh { get; set; }
+        public Guid? IdChucVu { get; set; }
+        public Guid? IdCuaHang { get; set; }
         [Required]
         [StringLength(50)]
         public string HoTen { get; set; }
@@ -40,15 +37,19 @@ namespace _1.DAL.DomainClass
         [Required]
         [StringLength(50)]
         public string Email { get; set; }
-        public int TrangThai { get; set; }
+        [StringLength(50)]
+        public string TrangThai { get; set; }
+        [Required]
+        [StringLength(50)]
+        public string MatKhau { get; set; }
 
-        [ForeignKey(nameof(MaCh))]
-        [InverseProperty(nameof(CuaHang.NhanViens))]
-        public virtual CuaHang MaChNavigation { get; set; }
-        [ForeignKey(nameof(MaChucVu))]
+        [ForeignKey(nameof(IdChucVu))]
         [InverseProperty(nameof(ChucVu.NhanViens))]
-        public virtual ChucVu MaChucVuNavigation { get; set; }
-        [InverseProperty(nameof(HoaDon.MaNhanVienNavigation))]
+        public virtual ChucVu IdChucVuNavigation { get; set; }
+        [ForeignKey(nameof(IdCuaHang))]
+        [InverseProperty(nameof(CuaHang.NhanViens))]
+        public virtual CuaHang IdCuaHangNavigation { get; set; }
+        [InverseProperty(nameof(HoaDon.IdNhanVienNavigation))]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
 }

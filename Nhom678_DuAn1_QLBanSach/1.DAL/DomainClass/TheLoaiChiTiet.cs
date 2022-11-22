@@ -17,20 +17,20 @@ namespace _1.DAL.DomainClass
         }
 
         [Key]
-        [StringLength(50)]
-        public string MaTheLoaiChiTiet { get; set; }
+        public Guid IdTheLoaiChiTiet { get; set; }
         [Required]
         [StringLength(50)]
-        public string MaTheLoai { get; set; }
+        public string MaTheLoaiChiTiet { get; set; }
+        public Guid IdTheLoai { get; set; }
         [Required]
         [StringLength(50)]
         public string TenTheLoai { get; set; }
         public int? TrangThai { get; set; }
 
-        [ForeignKey(nameof(MaTheLoai))]
+        [ForeignKey(nameof(IdTheLoai))]
         [InverseProperty(nameof(TheLoai.TheLoaiChiTiets))]
-        public virtual TheLoai MaTheLoaiNavigation { get; set; }
-        [InverseProperty(nameof(ChiTietSach.MaTheLoaiChiTietNavigation))]
+        public virtual TheLoai IdTheLoaiNavigation { get; set; }
+        [InverseProperty(nameof(ChiTietSach.IdTheLoaiChiTietNavigation))]
         public virtual ICollection<ChiTietSach> ChiTietSaches { get; set; }
     }
 }

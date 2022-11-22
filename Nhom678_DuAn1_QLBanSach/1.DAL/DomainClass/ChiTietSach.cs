@@ -17,38 +17,31 @@ namespace _1.DAL.DomainClass
         }
 
         [Key]
+        public Guid IdChiTietSach { get; set; }
+        [Required]
         [StringLength(50)]
         public string MaChiTietSach { get; set; }
-        [StringLength(50)]
-        public string MaTheLoaiChiTiet { get; set; }
-        [Column("MaNXB")]
-        [StringLength(50)]
-        public string MaNxb { get; set; }
-        [StringLength(50)]
-        public string MaTacGia { get; set; }
-        [StringLength(50)]
-        public string MaSach { get; set; }
-        [StringLength(50)]
-        public string MaKho { get; set; }
+        public Guid? IdTheLoaiChiTiet { get; set; }
+        [Column("IdNXB")]
+        public Guid? IdNxb { get; set; }
+        public Guid? IdTacGia { get; set; }
+        public Guid? IdSach { get; set; }
         [StringLength(50)]
         public string TrangThai { get; set; }
 
-        [ForeignKey(nameof(MaKho))]
-        [InverseProperty(nameof(Kho.ChiTietSaches))]
-        public virtual Kho MaKhoNavigation { get; set; }
-        [ForeignKey(nameof(MaNxb))]
+        [ForeignKey(nameof(IdNxb))]
         [InverseProperty(nameof(NhaXuatBan.ChiTietSaches))]
-        public virtual NhaXuatBan MaNxbNavigation { get; set; }
-        [ForeignKey(nameof(MaSach))]
+        public virtual NhaXuatBan IdNxbNavigation { get; set; }
+        [ForeignKey(nameof(IdSach))]
         [InverseProperty(nameof(Sach.ChiTietSaches))]
-        public virtual Sach MaSachNavigation { get; set; }
-        [ForeignKey(nameof(MaTacGia))]
+        public virtual Sach IdSachNavigation { get; set; }
+        [ForeignKey(nameof(IdTacGia))]
         [InverseProperty(nameof(TacGium.ChiTietSaches))]
-        public virtual TacGium MaTacGiaNavigation { get; set; }
-        [ForeignKey(nameof(MaTheLoaiChiTiet))]
+        public virtual TacGium IdTacGiaNavigation { get; set; }
+        [ForeignKey(nameof(IdTheLoaiChiTiet))]
         [InverseProperty(nameof(TheLoaiChiTiet.ChiTietSaches))]
-        public virtual TheLoaiChiTiet MaTheLoaiChiTietNavigation { get; set; }
-        [InverseProperty(nameof(HoaDonChiTiet.MaChiTietSachNavigation))]
+        public virtual TheLoaiChiTiet IdTheLoaiChiTietNavigation { get; set; }
+        [InverseProperty(nameof(HoaDonChiTiet.IdChiTietSachNavigation))]
         public virtual ICollection<HoaDonChiTiet> HoaDonChiTiets { get; set; }
     }
 }

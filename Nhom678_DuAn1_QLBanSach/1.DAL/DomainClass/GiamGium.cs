@@ -16,9 +16,10 @@ namespace _1.DAL.DomainClass
         }
 
         [Key]
-        [Column("MaGG")]
+        public Guid IdGiamGia { get; set; }
+        [Required]
         [StringLength(50)]
-        public string MaGg { get; set; }
+        public string MaGiamGia { get; set; }
         [Required]
         [Column("DoiTuongGG")]
         [StringLength(50)]
@@ -27,7 +28,7 @@ namespace _1.DAL.DomainClass
         public DateTime ThoiHan { get; set; }
         public double PhanTram { get; set; }
 
-        [InverseProperty(nameof(HoaDonChiTiet.MaGiamGiaNavigation))]
+        [InverseProperty(nameof(HoaDonChiTiet.IdGiamGiaNavigation))]
         public virtual ICollection<HoaDonChiTiet> HoaDonChiTiets { get; set; }
     }
 }

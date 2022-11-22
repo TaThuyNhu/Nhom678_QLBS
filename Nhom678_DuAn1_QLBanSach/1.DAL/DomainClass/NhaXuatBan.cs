@@ -17,6 +17,9 @@ namespace _1.DAL.DomainClass
         }
 
         [Key]
+        [Column("IdNXB")]
+        public Guid IdNxb { get; set; }
+        [Required]
         [Column("MaNXB")]
         [StringLength(50)]
         public string MaNxb { get; set; }
@@ -32,7 +35,7 @@ namespace _1.DAL.DomainClass
         [StringLength(50)]
         public string Url { get; set; }
 
-        [InverseProperty(nameof(ChiTietSach.MaNxbNavigation))]
+        [InverseProperty(nameof(ChiTietSach.IdNxbNavigation))]
         public virtual ICollection<ChiTietSach> ChiTietSaches { get; set; }
     }
 }

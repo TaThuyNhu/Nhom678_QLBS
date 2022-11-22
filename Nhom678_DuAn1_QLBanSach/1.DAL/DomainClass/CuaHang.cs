@@ -17,18 +17,18 @@ namespace _1.DAL.DomainClass
         }
 
         [Key]
-        [Column("MaCH")]
-        [StringLength(50)]
-        public string MaCh { get; set; }
+        public Guid IdCuaHang { get; set; }
         [Required]
-        [Column("TenCH")]
         [StringLength(50)]
-        public string TenCh { get; set; }
+        public string MaCuaHang { get; set; }
+        [Required]
+        [StringLength(50)]
+        public string TenCuaHang { get; set; }
         [Required]
         [StringLength(50)]
         public string DiaChi { get; set; }
 
-        [InverseProperty(nameof(NhanVien.MaChNavigation))]
+        [InverseProperty(nameof(NhanVien.IdCuaHangNavigation))]
         public virtual ICollection<NhanVien> NhanViens { get; set; }
     }
 }
